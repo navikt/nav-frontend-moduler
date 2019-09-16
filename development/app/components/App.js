@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import Alertstripe from 'NavFrontendModules/nav-frontend-alertstriper';
 import Lenke from 'NavFrontendModules/nav-frontend-lenker';
+import Knapp from 'NavFrontendModules/nav-frontend-knapper';
+import { Menyknapp } from 'NavFrontendModules/nav-frontend-ikonknapper';
 import { Undertittel } from 'NavFrontendModules/nav-frontend-typografi';
+import { Popover, Manager, Reference } from 'NavFrontendModules/nav-frontend-popover';
 
 import './styles.less';
 
@@ -20,6 +23,12 @@ import './styles.less';
 
 // eslint-disable-next-line react/prefer-stateless-function
 export default class App extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            apen: false
+        };
+    }
     render() {
         return (
             <div>
@@ -29,6 +38,9 @@ export default class App extends Component {
                 <br/>
                 <p>Gå til <code>/development/app/components/App.js</code> for å begynne utviklingen.</p>
                 <p>Du finner <Lenke href="https://github.com/navikt/nav-frontend-moduler/blob/master/CONTRIBUTING.md">dokumentasjon og veiledning</Lenke> her.</p>
+                
+                <Knapp>Meny</Knapp>
+                <Menyknapp><span className="sr-only">Meny</span></Menyknapp>
             </div>
         );
     }
