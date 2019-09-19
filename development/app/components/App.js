@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import Alertstripe from 'NavFrontendModules/nav-frontend-alertstriper';
 import Lenke from 'NavFrontendModules/nav-frontend-lenker';
 import Knapp from 'NavFrontendModules/nav-frontend-knapper';
 import { Menyknapp } from 'NavFrontendModules/nav-frontend-ikonknapper';
 import { Undertittel } from 'NavFrontendModules/nav-frontend-typografi';
-import { Popover, Manager, Reference } from 'NavFrontendModules/nav-frontend-popover';
+import { Popover } from 'NavFrontendModules/nav-frontend-popover';
+import { Popper, Manager, Reference } from 'react-popper';
 
 import './styles.less';
 
@@ -28,7 +30,9 @@ export default class App extends Component {
         this.state = {
             apen: false
         };
+        this.buttonRef;
     }
+
     render() {
         return (
             <div>
@@ -38,9 +42,29 @@ export default class App extends Component {
                 <br/>
                 <p>Gå til <code>/development/app/components/App.js</code> for å begynne utviklingen.</p>
                 <p>Du finner <Lenke href="https://github.com/navikt/nav-frontend-moduler/blob/master/CONTRIBUTING.md">dokumentasjon og veiledning</Lenke> her.</p>
-                
+
                 <Knapp>Meny</Knapp>
-                <Menyknapp><span className="sr-only">Meny</span></Menyknapp>
+                <Manager>
+                    <Reference>
+                        {({ref}) => (
+                            <Menyknapp innerRef={ref}>
+                                <span className="sr-only">Meny</span>
+                            </Menyknapp>
+                        )}
+                    </Reference>
+                    <Popper placement="top">
+                        {({ ref, style, placement, arrowProps }) => (
+                            <Popover
+                                innerRef={ref}
+                                style={style}
+                                orientering={placement}
+                                pilProps={arrowProps}
+                            >
+                                Hello
+                            </Popover>
+                        )}
+                    </Popper>
+                </Manager>
             </div>
         );
     }
