@@ -1,15 +1,13 @@
 @import (reference) '~NavFrontendCore/less/_variabler';
 
-.propTypeTableWrapperOuter {
-  margin:1rem 0;
-}
+#prop-types-tabell {
+  .prop-description {
+    > .etikett {
+      float: left;
+      margin-right: 0.5rem;
 
-.propTypeTableWrapper {
-  table {
-    .deprecated {
-      td {
-        color: @redError;
-        background: @pinkErrorBg;
+      + div > p {
+        line-height: 30px;
       }
     }
   }

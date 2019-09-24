@@ -119,6 +119,7 @@
     "redux": "^3.7.1",
     "redux-logger": "^3.0.6",
     "semver": "^5.4.1",
+    "showdown": "^1.9.0",
     "specificity": "^0.3.1",
     "style-loader": "^0.18.1",
     "svgo": "^0.7.2",

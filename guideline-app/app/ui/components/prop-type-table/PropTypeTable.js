@@ -1,7 +1,10 @@
 import React from 'react';
 import PT from 'prop-types';
 import cn from 'classnames';
+import showdown from 'showdown';
 
+import Etikett from 'NavFrontendModules/nav-frontend-etiketter';
+import { Undertekst } from 'NavFrontendModules/nav-frontend-typografi';
 import OverflowDetector from './../overflow-detector/OverflowDetector';
 
 import './styles.less';
@@ -19,7 +22,11 @@ class PropTypeTable extends React.Component {
 
         return (
             <OverflowDetector>
-                <table className="tabell tabell--stripet" ref={(node) => { this.table = node; }}>
+                <table
+                    id="prop-types-tabell"
+                    className="tabell tabell--stripet"
+                    ref={(node) => { this.table = node; }}
+                >
                     <thead>
                         <tr>
                             {
@@ -86,21 +93,31 @@ const parsePropValue = (val) => {
 };
 
 const parseDescription = (desc) => {
-    const found = desc.match(/^@deprecated/);
-    if (found) {
-        return (<span><strong>{found[0]}</strong>{desc.substr(11, desc.length)}</span>);
+    const converter = new showdown.Converter();
+    const deprecatedToken = desc.match(/^@deprecated/i);
+
+    if (deprecatedToken) {
+        desc = desc.substr(11, desc.length);
     }
-    return desc;
+
+    const descMarkdownToHtml = converter.makeHtml(desc).replace(/<code>/gm, '<code class="inline">');
+
+    return (
+        <div className="prop-description">
+            {deprecatedToken && <Etikett type="fokus"><Undertekst>deprecated</Undertekst></Etikett>}
+            <div dangerouslySetInnerHTML={{__html: descMarkdownToHtml }} />
+        </div>
+    );
 };
 
 const PropTypeTableRow = (props) => {
-    const desc = parseDescription(parsePropValue(props.val.description));
+    // const desc = ;
     return (
         <tr className={cn({ deprecated: typeof desc === 'object' })}>
             <td><strong>{parsePropValue(props.val.name)}</strong></td>
             <td><code className="inline">{parsePropValue(props.val.type)}</code></td>
             <td>{parsePropValue(props.val.required)}</td>
-            <td dangerouslySetInnerHTML={{ __html: desc }} />
+            <td>{parseDescription(parsePropValue(props.val.description))}</td>
             <td>{parsePropValue(props.val.defaultValue)}</td>
         </tr>
     );
