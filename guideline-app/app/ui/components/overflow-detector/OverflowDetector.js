@@ -35,11 +35,14 @@ class OverflowDetector extends React.Component {
         let overflowLeft = false;
         let overflowRight = false;
 
-        if (this.scroller.current.offsetWidth < this.inner.current.offsetWidth) {
-            if (this.scroller.current.scrollLeft !== 0) {
+        const scroller = this.scroller.current;
+        const inner = this.inner.current;
+
+        if (scroller.offsetWidth < inner.offsetWidth) {
+            if (scroller.scrollLeft !== 0) {
                 overflowLeft = true;
             }
-            if ((this.scroller.current.scrollLeft + this.scroller.current.offsetWidth) < this.inner.current.offsetWidth) {
+            if ((scroller.scrollLeft + scroller.offsetWidth) < inner.offsetWidth) {
                 overflowRight = true;
             }
         }
