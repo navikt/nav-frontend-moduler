@@ -100,7 +100,7 @@ const PropTypeTableRow = (props) => {
             <td><strong>{parsePropValue(props.val.name)}</strong></td>
             <td><code className="inline">{parsePropValue(props.val.type)}</code></td>
             <td>{parsePropValue(props.val.required)}</td>
-            <td>{desc}</td>
+            <td dangerouslySetInnerHTML={{__html: desc}} />
             <td>{parsePropValue(props.val.defaultValue)}</td>
         </tr>
     );
