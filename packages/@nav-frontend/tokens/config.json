@@ -1,5 +1,5 @@
 {
-  "source": ["properties/**/*.js"],
+  "source": ["src/**/*.js"],
   "platforms": {
     "less": {
       "transformGroup": "less",
