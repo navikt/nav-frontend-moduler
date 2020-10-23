@@ -29,6 +29,4 @@ Object.entries(baseColors).forEach(([color, value]) => {
   });
 });
 
-module.exports = {
-  color: colors,
-};
+module.exports = colors;
