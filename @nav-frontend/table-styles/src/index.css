@@ -1,0 +1,20 @@
+.navds-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.navds-table th {
+  font-weight: bold; /* semibold */
+  border-bottom: 1px solid var(--navds-color-gray-60);
+}
+
+.navds-table th,
+.navds-table td {
+  text-align: left;
+  padding: 1rem;
+}
+
+.navds-table td {
+  border-bottom: 1px solid var(--navds-color-gray-40);
+}
