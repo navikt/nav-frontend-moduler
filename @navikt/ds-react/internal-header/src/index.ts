@@ -10,3 +10,11 @@ export {
   default as InternalHeaderUser,
   InternalHeaderUserProps,
 } from "./InternalHeaderUser";
+export {
+  default as InternalHeaderUserMenu,
+  InternalHeaderUserMenuProps,
+} from "./InternalHeaderUserMenu";
+export {
+  default as InternalHeaderUserMenuItem,
+  InternalHeaderUserMenuItemProps,
+} from "./InternalHeaderUserMenuItem";

@@ -4,6 +4,8 @@ import {
   InternalHeader,
   InternalHeaderTitle,
   InternalHeaderUser,
+  InternalHeaderUserMenu,
+  InternalHeaderUserMenuItem,
 } from "../src/index";
 
 export default {
@@ -52,5 +54,27 @@ export const All = () => (
       <InternalHeaderTitle>NAV Sykepenger</InternalHeaderTitle>
       <InternalHeaderUser name="Kong Harald" ident="D123456" />
     </InternalHeader>
+
+    <h1>Title + User Menu</h1>
+    <Router>
+      <InternalHeader>
+        <InternalHeaderTitle>NAV Sykepenger</InternalHeaderTitle>
+        <InternalHeaderUserMenu
+          name="Kong Harald"
+          ident="D123456"
+          unit="NAV Sagene"
+        >
+          <InternalHeaderUserMenuItem href="#">
+            Ahref
+          </InternalHeaderUserMenuItem>
+          <InternalHeaderUserMenuItem component={Link} to="/">
+            Link
+          </InternalHeaderUserMenuItem>
+          <InternalHeaderUserMenuItem component="button" onClick={() => {}}>
+            Button
+          </InternalHeaderUserMenuItem>
+        </InternalHeaderUserMenu>
+      </InternalHeader>
+    </Router>
   </div>
 );
