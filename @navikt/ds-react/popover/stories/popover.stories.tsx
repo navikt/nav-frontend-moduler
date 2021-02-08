@@ -27,7 +27,9 @@ const Template = (props) => {
         {props.placement}
       </div>
       <Popover {...props} anchorEl={anchorEl} onClose={() => {}} open>
-        Contents
+        <div style={{ padding: props.size !== "small" && "1rem" }}>
+          {props.size === "small" ? "👋" : "Contents"}
+        </div>
       </Popover>
     </>
   );

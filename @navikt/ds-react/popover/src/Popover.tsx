@@ -47,7 +47,6 @@ export interface PopoverProps extends HTMLAttributes<HTMLDivElement> {
     | "right-end"
     | "left-start"
     | "left-end";
-  size?: "medium" | "small";
 }
 
 const useEventLister = (event: string, callback) =>
@@ -67,7 +66,6 @@ const Popover = forwardRef<HTMLDivElement, PopoverProps>(
       children,
       placement = "right",
       className,
-      size = "medium",
       ...rest
     },
     ref
@@ -138,7 +136,7 @@ const Popover = forwardRef<HTMLDivElement, PopoverProps>(
     return (
       <div
         ref={mergedRef}
-        className={cl("navds-popover", `navds-popover--${size}`, className, {
+        className={cl("navds-popover", className, {
           "popover--hidden": !open || !anchorEl,
         })}
         aria-live="polite"
