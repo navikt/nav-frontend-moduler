@@ -25,8 +25,10 @@ module.exports = {
       white: { value: white },
       darkgray: { value: darkgray },
       gray: {
-        40: { value: "#b7b1a9" },
         60: { value: "#78706a" },
+        40: { value: "#b7b1a9" },
+        20: { value: "#C6C2BF" },
+        10: { value: "#E9E7E7" },
       },
       ...Object.entries(baseColors).reduce(
         (colors, [name, color]) => ({

@@ -14,11 +14,28 @@ export default {
 };
 
 export const All = () => (
-  <div>
-    <InternalHeader>
-      <InternalHeaderTitle>NAV Sykepenger</InternalHeaderTitle>
-      <InternalHeaderUser name="Kong Harald" ident="D123456" />
-    </InternalHeader>
+  <div style={{ marginBottom: 200 }}>
+    <h1>Title + User Menu</h1>
+    <Router>
+      <InternalHeader>
+        <InternalHeaderTitle>NAV Sykepenger</InternalHeaderTitle>
+        <InternalHeaderUserMenu
+          name="Kong Harald"
+          ident="D123456"
+          unit="NAV Sagene"
+        >
+          <InternalHeaderUserMenuItem href="#">
+            4806 NFP Drammen
+          </InternalHeaderUserMenuItem>
+          <InternalHeaderUserMenuItem component={Link} to="/">
+            3286 NFP Oslo
+          </InternalHeaderUserMenuItem>
+          <InternalHeaderUserMenuItem component="button" onClick={() => {}}>
+            Logg ut
+          </InternalHeaderUserMenuItem>
+        </InternalHeaderUserMenu>
+      </InternalHeader>
+    </Router>
 
     <h1>Uten innhold</h1>
     <InternalHeader />
@@ -54,27 +71,5 @@ export const All = () => (
       <InternalHeaderTitle>NAV Sykepenger</InternalHeaderTitle>
       <InternalHeaderUser name="Kong Harald" ident="D123456" />
     </InternalHeader>
-
-    <h1>Title + User Menu</h1>
-    <Router>
-      <InternalHeader>
-        <InternalHeaderTitle>NAV Sykepenger</InternalHeaderTitle>
-        <InternalHeaderUserMenu
-          name="Kong Harald"
-          ident="D123456"
-          unit="NAV Sagene"
-        >
-          <InternalHeaderUserMenuItem href="#">
-            Ahref
-          </InternalHeaderUserMenuItem>
-          <InternalHeaderUserMenuItem component={Link} to="/">
-            Link
-          </InternalHeaderUserMenuItem>
-          <InternalHeaderUserMenuItem component="button" onClick={() => {}}>
-            Button
-          </InternalHeaderUserMenuItem>
-        </InternalHeaderUserMenu>
-      </InternalHeader>
-    </Router>
   </div>
 );

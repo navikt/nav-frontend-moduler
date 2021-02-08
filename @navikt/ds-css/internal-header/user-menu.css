@@ -1,0 +1,23 @@
+.navds-header__user-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+}
+
+.navds-header__user-menu-item {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--navds-color-text-primary);
+  font: inherit;
+  margin: 0;
+  padding: 0.3rem 1rem;
+  text-align: left;
+  text-decoration: none;
+  font-size: var(--navds-font-size-small);
+  line-height: var(--navds-font-line-height-small);
+}
+
+.navds-header__user-menu-item:hover {
+  background-color: var(--navds-color-gray-10);
+}

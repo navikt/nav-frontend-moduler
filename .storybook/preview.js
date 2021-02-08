@@ -11,4 +11,5 @@ export const parameters = {
       return 0;
     },
   },
+  layout: "fullscreen",
 };

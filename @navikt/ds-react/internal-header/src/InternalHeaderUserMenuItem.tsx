@@ -10,14 +10,14 @@ export interface TypeMap {
 }
 
 const InternalHeaderUserMenuItem: OverridableComponent<TypeMap> = forwardRef(
-  ({ className, component: Component = "a", ...rest }, ref) => {
+  ({ className, component: Component = "a", children, ...rest }, ref) => {
     return (
       <Component
         ref={ref}
-        className={cl("navds-header__user", className)}
+        className={cl("navds-header__user-menu-item", className)}
         {...rest}
       >
-        wat
+        {children}
       </Component>
     );
   }
