@@ -6,7 +6,6 @@ import React, {
   useRef,
 } from "react";
 import { usePopper } from "react-popper";
-import { Placement } from "@popperjs/core";
 import mergeRefs from "react-merge-refs";
 import cl from "classnames";
 import "@navikt/ds-css/popover/index.css";
@@ -32,7 +31,22 @@ export interface PopoverProps extends HTMLAttributes<HTMLDivElement> {
    * Orientation for popover
    * @default 'auto'
    */
-  placement?: Placement;
+  placement?:
+    | "auto"
+    | "auto-start"
+    | "auto-end"
+    | "top"
+    | "bottom"
+    | "right"
+    | "left"
+    | "top-start"
+    | "top-end"
+    | "bottom-start"
+    | "bottom-end"
+    | "right-start"
+    | "right-end"
+    | "left-start"
+    | "left-end";
   size?: "medium" | "small";
 }
 
