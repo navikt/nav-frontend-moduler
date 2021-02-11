@@ -32,6 +32,7 @@ function getGlobFiles(globPattern, options) {
 }
 
 Promise.all([
+  getGlobFiles("./@navikt/**/lib", { dot: true }),
   getGlobFiles("./packages/**/lib", { dot: true }),
   getGlobFiles("./packages/**/dist", { dot: true }),
   getGlobFiles("./packages/**/src/*.d.ts", { dit: true }),

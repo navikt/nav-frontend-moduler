@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "@navikt/ds-css": "0.1.0-beta.1",
-    "classnames": "^2.2.6"
+    "@navikt/ds-react": "0.1.0-beta.1",
+    "classnames": "^2.2.6",
+    "react-merge-refs": "^1.1.0"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0",

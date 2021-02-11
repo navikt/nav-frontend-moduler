@@ -14,7 +14,4 @@ export {
   default as InternalHeaderUserMenu,
   InternalHeaderUserMenuProps,
 } from "./InternalHeaderUserMenu";
-export {
-  default as InternalHeaderUserMenuItem,
-  InternalHeaderUserMenuItemProps,
-} from "./InternalHeaderUserMenuItem";
+export { default as InternalHeaderUserMenuItem } from "./InternalHeaderUserMenuItem";

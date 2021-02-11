@@ -22,7 +22,7 @@
     "lint:jsts": "npx eslint .",
     "lint:less": "npx stylelint --syntax less **/*.less",
     "lint:css": "npx stylelint --syntax css @navikt/**/*.css",
-    "clean:lib": "node utilities/scripts/clean.js",
+    "clean:lib": "del-cli \"./**/lib\" \"./**/dist\" \"./**/*.d.ts\" \"!./**/node_modules/**\"",
     "fix:versions": "node utilities/scripts/fixDependencyVersions.js",
     "gen:docs": "node utilities/scripts/generateReadmes.js"
   },
@@ -104,6 +104,7 @@
     "yarn": "^1.22.10"
   },
   "devDependencies": {
+    "del-cli": "^3.0.1",
     "@babel/core": "^7.11.6",
     "@storybook/addon-actions": "^6.1.15",
     "@storybook/addon-essentials": "^6.1.15",

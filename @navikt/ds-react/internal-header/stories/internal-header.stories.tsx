@@ -2,10 +2,10 @@ import React from "react";
 import { HashRouter as Router, Link } from "react-router-dom";
 import {
   InternalHeader,
-  InternalHeaderTitle,
-  InternalHeaderUser,
-  InternalHeaderUserMenu,
-  InternalHeaderUserMenuItem,
+  InternalHeaderTitle as Title,
+  InternalHeaderUser as User,
+  InternalHeaderUserMenu as UserMenu,
+  InternalHeaderUserMenuItem as UserMenuItem,
 } from "../src/index";
 
 export default {
@@ -18,22 +18,69 @@ export const All = () => (
     <h1>Title + User Menu</h1>
     <Router>
       <InternalHeader>
-        <InternalHeaderTitle>NAV Sykepenger</InternalHeaderTitle>
-        <InternalHeaderUserMenu
+        <Title>NAV Sykepenger</Title>
+        <UserMenu name="Kong Harald" ident="D123456">
+          <UserMenuItem href="#">4806 NFP Drammen</UserMenuItem>
+          <UserMenuItem component={Link} to="/">
+            3286 NFP Oslo
+          </UserMenuItem>
+          <UserMenuItem component="button" onClick={() => {}}>
+            Logg ut
+          </UserMenuItem>
+        </UserMenu>
+      </InternalHeader>
+    </Router>
+
+    <h1>Title + User Menu with role</h1>
+    <Router>
+      <InternalHeader>
+        <Title>NAV Sykepenger</Title>
+        <UserMenu name="Kong Harald" ident="D123456" role="Konge">
+          <UserMenuItem href="#">4806 NFP Drammen</UserMenuItem>
+          <UserMenuItem component={Link} to="/">
+            3286 NFP Oslo
+          </UserMenuItem>
+          <UserMenuItem component="button" onClick={() => {}}>
+            Logg ut
+          </UserMenuItem>
+        </UserMenu>
+      </InternalHeader>
+    </Router>
+
+    <h1>Title + User Menu with unit</h1>
+    <Router>
+      <InternalHeader>
+        <Title>NAV Sykepenger</Title>
+        <UserMenu name="Kong Harald" ident="D123456" unit="NAV Sagene">
+          <UserMenuItem href="#">4806 NFP Drammen</UserMenuItem>
+          <UserMenuItem component={Link} to="/">
+            3286 NFP Oslo
+          </UserMenuItem>
+          <UserMenuItem component="button" onClick={() => {}}>
+            Logg ut
+          </UserMenuItem>
+        </UserMenu>
+      </InternalHeader>
+    </Router>
+
+    <h1>Title + User Menu with unit and role</h1>
+    <Router>
+      <InternalHeader>
+        <Title>NAV Sykepenger</Title>
+        <UserMenu
           name="Kong Harald"
           ident="D123456"
           unit="NAV Sagene"
+          role="Konge"
         >
-          <InternalHeaderUserMenuItem href="#">
-            4806 NFP Drammen
-          </InternalHeaderUserMenuItem>
-          <InternalHeaderUserMenuItem component={Link} to="/">
+          <UserMenuItem href="#">4806 NFP Drammen</UserMenuItem>
+          <UserMenuItem component={Link} to="/">
             3286 NFP Oslo
-          </InternalHeaderUserMenuItem>
-          <InternalHeaderUserMenuItem component="button" onClick={() => {}}>
+          </UserMenuItem>
+          <UserMenuItem component="button" onClick={() => {}}>
             Logg ut
-          </InternalHeaderUserMenuItem>
-        </InternalHeaderUserMenu>
+          </UserMenuItem>
+        </UserMenu>
       </InternalHeader>
     </Router>
 
@@ -42,34 +89,34 @@ export const All = () => (
 
     <h1>Title</h1>
     <InternalHeader>
-      <InternalHeaderTitle>Tittel</InternalHeaderTitle>
+      <Title>Tittel</Title>
     </InternalHeader>
 
     <h1>Title but not heading</h1>
     <InternalHeader>
-      <InternalHeaderTitle element="span">Tittel</InternalHeaderTitle>
+      <Title element="span">Tittel</Title>
     </InternalHeader>
 
     <h1>Title with link</h1>
     <InternalHeader>
-      <InternalHeaderTitle>
+      <Title>
         <a href="/#">Tittel med lenke</a>
-      </InternalHeaderTitle>
+      </Title>
     </InternalHeader>
 
     <h1>Title with react-router link</h1>
     <Router>
       <InternalHeader>
-        <InternalHeaderTitle>
+        <Title>
           <Link to="/">Tittel med lenke</Link>
-        </InternalHeaderTitle>
+        </Title>
       </InternalHeader>
     </Router>
 
     <h1>Title + User</h1>
     <InternalHeader>
-      <InternalHeaderTitle>NAV Sykepenger</InternalHeaderTitle>
-      <InternalHeaderUser name="Kong Harald" ident="D123456" />
+      <Title>NAV Sykepenger</Title>
+      <User name="Kong Harald" ident="D123456" />
     </InternalHeader>
   </div>
 );
