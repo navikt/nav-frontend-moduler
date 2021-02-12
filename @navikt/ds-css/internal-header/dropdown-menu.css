@@ -1,5 +1,6 @@
-.navds-header__user-menu {
+.navds-header__dropdown-menu {
   margin: 0;
+  margin-left: auto;
   display: flex;
   align-items: center;
   padding: 0.5rem 1rem;
@@ -15,30 +16,30 @@
   cursor: pointer;
 }
 
-.navds-header__user-menu:hover {
+.navds-header__dropdown-menu:hover {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-.navds-header__user-menu:focus {
+.navds-header__dropdown-menu:focus {
   box-shadow: inset var(--navds-shadow-focus-on-dark);
   outline: none;
 }
 
-.navds-header__user-menu svg {
+.navds-header__dropdown-menu svg {
   font-size: 1.2rem;
 }
 
-.navds-header__user-menu__name {
+.navds-header__dropdown-menu__name {
   margin-right: 1rem;
 }
 
-.navds-header__user-menu__menu {
+.navds-header__dropdown-menu__menu {
   display: flex;
   flex-direction: column;
   padding: 0.25rem 0;
 }
 
-.navds-header__user-menu-item {
+.navds-header__dropdown-menu-item {
   background: transparent;
   border: none;
   cursor: pointer;
@@ -52,17 +53,17 @@
   line-height: var(--navds-font-line-height-small);
 }
 
-.navds-header__user-menu-item:hover,
-.navds-header__user-menu-item:focus {
+.navds-header__dropdown-menu-item:hover,
+.navds-header__dropdown-menu-item:focus {
   background-color: var(--navds-color-gray-10);
 }
 
-.navds-header__user-menu__unit,
-.navds-header__user-menu__role {
+.navds-header__dropdown-menu__unit,
+.navds-header__dropdown-menu__role {
   font-size: var(--navds-font-size-xs);
 }
 
-.navds-header__user-menu__unit:not(:last-child):after {
+.navds-header__dropdown-menu__unit:not(:last-child):after {
   content: ", ";
   display: inline;
 }

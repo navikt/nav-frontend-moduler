@@ -8,62 +8,64 @@ import "@navikt/ds-css/typography/index.css";
 
 export interface InternalHeaderUserMenuProps
   extends HTMLAttributes<HTMLButtonElement> {
-  name: string;
-  ident: string;
-  unit?: string;
-  role?: string;
+  user: { name: string; ident: string; unit?: string; role?: string };
 }
 
 const InternalHeaderUserMenu = forwardRef<
   HTMLButtonElement,
   InternalHeaderUserMenuProps
->(({ className, name, ident, unit, role, children, ...rest }, ref) => {
-  const buttonRef = useRef<HTMLButtonElement | null>(null);
-  const mergedRef = mergeRefs([buttonRef, ref]);
+>(
+  (
+    { className, user: { name, ident, unit, role }, children, ...rest },
+    ref
+  ) => {
+    const buttonRef = useRef<HTMLButtonElement | null>(null);
+    const mergedRef = mergeRefs([buttonRef, ref]);
 
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [anchorEl, setAnchorEl] = useState<Element | null>(null);
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [anchorEl, setAnchorEl] = useState<Element | null>(null);
 
-  return (
-    <>
-      <button
-        {...rest}
-        ref={mergedRef}
-        className={cl("navds-header__user-menu", className)}
-        onClick={() => setIsOpen((isOpen) => !isOpen)}
-      >
-        <div>
+    return (
+      <>
+        <button
+          {...rest}
+          ref={mergedRef}
+          className={cl("navds-header__user-menu", className)}
+          onClick={() => setIsOpen((isOpen) => !isOpen)}
+        >
           <div>
-            <span className="navds-header__user-menu__name">{name}</span>
-            <span className="navds-header__user-menu__ident">{ident}</span>
-          </div>
-          {(unit || role) && (
             <div>
-              {unit && (
-                <span className="navds-header__user-menu__unit">{unit}</span>
-              )}
-              {role && (
-                <span className="navds-header__user-menu__role">{role}</span>
-              )}
+              <span className="navds-header__user-menu__name">{name}</span>
+              <span className="navds-header__user-menu__ident">{ident}</span>
             </div>
-          )}
-        </div>
-        <Expand ref={setAnchorEl} />
-      </button>
-      <Popover
-        anchorEl={anchorEl}
-        onClose={() => {
-          if (buttonRef.current !== document.activeElement) {
-            setIsOpen(false);
-          }
-        }}
-        open={isOpen}
-        placement="bottom"
-      >
-        <div className="navds-header__user-menu__menu">{children}</div>
-      </Popover>
-    </>
-  );
-});
+            {(unit || role) && (
+              <div>
+                {unit && (
+                  <span className="navds-header__user-menu__unit">{unit}</span>
+                )}
+                {role && (
+                  <span className="navds-header__user-menu__role">{role}</span>
+                )}
+              </div>
+            )}
+          </div>
+          <Expand ref={setAnchorEl} />
+        </button>
+        <Popover
+          anchorEl={anchorEl}
+          onClose={() => {
+            if (buttonRef.current !== document.activeElement) {
+              setIsOpen(false);
+            }
+          }}
+          open={isOpen}
+          placement="bottom"
+        >
+          <div className="navds-header__user-menu__menu">{children}</div>
+        </Popover>
+      </>
+    );
+  }
+);
 
 export default InternalHeaderUserMenu;

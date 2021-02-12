@@ -15,3 +15,5 @@ export {
   InternalHeaderUserMenuProps,
 } from "./InternalHeaderUserMenu";
 export { default as InternalHeaderUserMenuItem } from "./InternalHeaderUserMenuItem";
+export { default as InternalHeaderDropdownMenu } from "./InternalHeaderDropdownMenu";
+export { default as InternalHeaderDropdownMenuItem } from "./InternalHeaderDropdownMenuItem";

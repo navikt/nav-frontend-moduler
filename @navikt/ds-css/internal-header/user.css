@@ -1,7 +1,6 @@
 .navds-header__user {
   color: var(--navds-color-text-inverse);
   padding: 0 1.5rem 0 1.5rem;
-  margin-left: auto;
   border-left: 1px solid var(--navds-color-gray-40);
   display: flex;
   align-self: stretch;

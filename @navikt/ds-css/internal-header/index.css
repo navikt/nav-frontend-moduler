@@ -1,6 +1,7 @@
 @import "./title.css";
 @import "./user.css";
 @import "./user-menu.css";
+@import "./dropdown-menu.css";
 
 .navds-header {
   display: flex;

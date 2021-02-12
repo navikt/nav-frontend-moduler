@@ -6,6 +6,8 @@ import {
   InternalHeaderUser as User,
   InternalHeaderUserMenu as UserMenu,
   InternalHeaderUserMenuItem as UserMenuItem,
+  InternalHeaderDropdownMenu as DropdownMenu,
+  InternalHeaderDropdownMenuItem as DropdownMenuItem,
 } from "../src/index";
 
 export default {
@@ -15,11 +17,39 @@ export default {
 
 export const All = () => (
   <div style={{ marginBottom: 200 }}>
+    <h1>Title + Dropdown + User Menu</h1>
+    <Router>
+      <InternalHeader>
+        <Title>NAV Sykepenger</Title>
+        <DropdownMenu style={{ marginLeft: "auto" }}>
+          <DropdownMenuItem href="#">ahref</DropdownMenuItem>
+          <DropdownMenuItem component={Link} to="/">
+            Link
+          </DropdownMenuItem>
+          <DropdownMenuItem component="button" onClick={() => {}}>
+            button
+          </DropdownMenuItem>
+        </DropdownMenu>
+        <UserMenu user={{ name: "Kong Harald", ident: "D123456" }}>
+          <UserMenuItem href="#">4806 NFP Drammen</UserMenuItem>
+          <UserMenuItem component={Link} to="/">
+            3286 NFP Oslo
+          </UserMenuItem>
+          <UserMenuItem component="button" onClick={() => {}}>
+            Logg ut
+          </UserMenuItem>
+        </UserMenu>
+      </InternalHeader>
+    </Router>
+
     <h1>Title + User Menu</h1>
     <Router>
       <InternalHeader>
         <Title>NAV Sykepenger</Title>
-        <UserMenu name="Kong Harald" ident="D123456">
+        <UserMenu
+          user={{ name: "Kong Harald", ident: "D123456" }}
+          style={{ marginLeft: "auto" }}
+        >
           <UserMenuItem href="#">4806 NFP Drammen</UserMenuItem>
           <UserMenuItem component={Link} to="/">
             3286 NFP Oslo
@@ -35,7 +65,10 @@ export const All = () => (
     <Router>
       <InternalHeader>
         <Title>NAV Sykepenger</Title>
-        <UserMenu name="Kong Harald" ident="D123456" role="Konge">
+        <UserMenu
+          user={{ name: "Kong Harald", ident: "D123456", role: "Konge" }}
+          style={{ marginLeft: "auto" }}
+        >
           <UserMenuItem href="#">4806 NFP Drammen</UserMenuItem>
           <UserMenuItem component={Link} to="/">
             3286 NFP Oslo
@@ -51,7 +84,10 @@ export const All = () => (
     <Router>
       <InternalHeader>
         <Title>NAV Sykepenger</Title>
-        <UserMenu name="Kong Harald" ident="D123456" unit="NAV Sagene">
+        <UserMenu
+          user={{ name: "Kong Harald", ident: "D123456", unit: "NAV Sagene" }}
+          style={{ marginLeft: "auto" }}
+        >
           <UserMenuItem href="#">4806 NFP Drammen</UserMenuItem>
           <UserMenuItem component={Link} to="/">
             3286 NFP Oslo
@@ -68,10 +104,13 @@ export const All = () => (
       <InternalHeader>
         <Title>NAV Sykepenger</Title>
         <UserMenu
-          name="Kong Harald"
-          ident="D123456"
-          unit="NAV Sagene"
-          role="Konge"
+          user={{
+            name: "Kong Harald",
+            ident: "D123456",
+            unit: "NAV Sagene",
+            role: "Konge",
+          }}
+          style={{ marginLeft: "auto" }}
         >
           <UserMenuItem href="#">4806 NFP Drammen</UserMenuItem>
           <UserMenuItem component={Link} to="/">
@@ -116,7 +155,7 @@ export const All = () => (
     <h1>Title + User</h1>
     <InternalHeader>
       <Title>NAV Sykepenger</Title>
-      <User name="Kong Harald" ident="D123456" />
+      <User name="Kong Harald" ident="D123456" style={{ marginLeft: "auto" }} />
     </InternalHeader>
   </div>
 );
