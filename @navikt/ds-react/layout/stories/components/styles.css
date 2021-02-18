@@ -10,3 +10,19 @@
 .section {
   margin-bottom: 1rem;
 }
+
+.panel {
+  background-color: white;
+  min-height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
+  background-color: rgb(204, 225, 243);
+}
+
+.banner-content {
+  padding: 1rem;
+}
