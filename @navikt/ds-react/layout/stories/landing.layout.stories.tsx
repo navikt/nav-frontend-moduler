@@ -5,24 +5,22 @@ import { Cell, Grid } from "../../grid/src";
 import { Normaltekst, Systemtittel } from "nav-frontend-typografi";
 import Panel from "nav-frontend-paneler";
 import "./components/styles.css";
+import { useEffect } from "react";
 
 export default {
   title: "@navikt/layout/LandingPage",
   component: { Layout },
   decorators: [
-    (Story) => (
-      <>
-        <div id="decorator-header" />
-        <Story />
-        <div id="decorator-footer" />
-      </>
-    ),
-  ],
-  loaders: [
-    async () => {
-      var script = document.createElement("script");
-      script.src = "https://www.nav.no/dekoratoren/client.js";
-      document.body.appendChild(script);
+    (Story) => {
+      useEffect(() => {
+        document.getElementById("decorator-header").style.display = "block";
+        document.getElementById("decorator-footer").style.display = "block";
+        return () => {
+          document.getElementById("decorator-header").style.display = "none";
+          document.getElementById("decorator-footer").style.display = "none";
+        };
+      }, []);
+      return <Story />;
     },
   ],
   parameters: {
