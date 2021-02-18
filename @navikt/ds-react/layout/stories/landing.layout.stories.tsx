@@ -2,13 +2,29 @@ import * as React from "react";
 import { Layout } from "../src/index";
 import { ContentContainer } from "../../content-container/src";
 import { Cell, Grid } from "../../grid/src";
-import { Normaltekst, Systemtittel, Undertittel } from "nav-frontend-typografi";
+import { Normaltekst, Systemtittel } from "nav-frontend-typografi";
 import Panel from "nav-frontend-paneler";
 import "./components/styles.css";
 
 export default {
   title: "@navikt/layout/LandingPage",
   component: { Layout },
+  decorators: [
+    (Story) => (
+      <>
+        <div id="decorator-header" />
+        <Story />
+        <div id="decorator-footer" />
+      </>
+    ),
+  ],
+  loaders: [
+    async () => {
+      var script = document.createElement("script");
+      script.src = "https://www.nav.no/dekoratoren/client.js";
+      document.body.appendChild(script);
+    },
+  ],
   parameters: {
     layout: "fullscreen",
     backgrounds: {

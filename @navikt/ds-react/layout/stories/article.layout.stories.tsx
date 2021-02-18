@@ -9,6 +9,22 @@ import "./components/styles.css";
 export default {
   title: "@navikt/layout/Article",
   component: { Layout },
+  loaders: [
+    async () => {
+      var script = document.createElement("script");
+      script.src = "https://www.nav.no/dekoratoren/client.js";
+      document.body.appendChild(script);
+    },
+  ],
+  decorators: [
+    (Story) => (
+      <>
+        <div id="decorator-header" />
+        <Story />
+        <div id="decorator-footer" />
+      </>
+    ),
+  ],
   parameters: {
     layout: "fullscreen",
     backgrounds: {
