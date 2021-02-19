@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { HashRouter as Router, Link } from "react-router-dom";
 import { DropdownMenu, DropdownMenuItem } from "../src/index";
 
@@ -8,8 +8,6 @@ export default {
 };
 
 export const All = () => {
-  const [open, setOpen] = useState(false);
-
   return (
     <>
       <h1>Dropdown menu</h1>
