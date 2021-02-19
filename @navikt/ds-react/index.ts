@@ -7,11 +7,8 @@ export { default as Popover, PopoverProps } from "./popover/src/index";
 export { default as Tag, TagProps } from "./tag/src/index";
 export {
   InternalHeader,
-  InternalHeaderProps,
   InternalHeaderTitle,
-  InternalHeaderTitleProps,
   InternalHeaderUser,
-  InternalHeaderUserProps,
 } from "./internal-header/src/index";
 export {
   Heading,
@@ -21,3 +18,5 @@ export {
   HeadingProps,
   TextProps,
 } from "./typography/src/index";
+export { DropdownMenu, DropdownMenuItem } from "./dropdown-menu/src/index";
+export { OverridableComponent } from "./utils";

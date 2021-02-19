@@ -1,21 +1,34 @@
-.navds-header__user {
+.navds-internal-header-user {
   color: var(--navds-color-text-inverse);
-  padding: 0 1.5rem 0 1.5rem;
+  padding: 0.5rem 1rem;
   border-left: 1px solid var(--navds-color-gray-40);
-  display: flex;
   align-self: stretch;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1;
 }
 
-.navds-header__name {
+.navds-internal-header-user__name {
   margin-right: 1rem;
   font-size: var(--navds-font-size-small);
   font-weight: var(--navds-font-weight-bold);
-  line-height: var(--navds-font-line-height-small);
 }
 
-.navds-header__ident {
+.navds-internal-header-user__ident {
   font-size: var(--navds-font-size-xs);
   font-weight: var(--navds-font-weight-bold);
-  line-height: var(--navds-font-line-height-xs);
+}
+
+.navds-internal-header-user__unit {
+  font-size: var(--navds-font-size-xs);
+}
+
+.navds-internal-header-user__unit:not(:last-child):after {
+  content: ", ";
+  display: inline;
+}
+
+.navds-internal-header-user__role {
+  font-size: var(--navds-font-size-xs);
 }

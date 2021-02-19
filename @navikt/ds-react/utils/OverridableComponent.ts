@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 /**
  * A component whose root component can be controlled via a `component` prop.

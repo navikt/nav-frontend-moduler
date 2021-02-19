@@ -133,7 +133,7 @@ export const All = () => (
 
     <h1>Title but not heading</h1>
     <InternalHeader>
-      <Title element="span">Tittel</Title>
+      <Title component="span">Tittel</Title>
     </InternalHeader>
 
     <h1>Title with link</h1>
@@ -155,7 +155,24 @@ export const All = () => (
     <h1>Title + User</h1>
     <InternalHeader>
       <Title>NAV Sykepenger</Title>
-      <User name="Kong Harald" ident="D123456" style={{ marginLeft: "auto" }} />
+      <User
+        user={{ name: "Kong Harald", ident: "D123456" }}
+        style={{ marginLeft: "auto" }}
+      />
+    </InternalHeader>
+
+    <h1>Title + Complete User</h1>
+    <InternalHeader>
+      <Title>NAV Sykepenger</Title>
+      <User
+        user={{
+          name: "Kong Harald",
+          ident: "D123456",
+          unit: "NAV Sagene",
+          role: "Konge",
+        }}
+        style={{ marginLeft: "auto" }}
+      />
     </InternalHeader>
   </div>
 );

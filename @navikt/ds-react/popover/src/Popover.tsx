@@ -12,6 +12,10 @@ import "@navikt/ds-css/popover/index.css";
 
 export interface PopoverProps extends HTMLAttributes<HTMLDivElement> {
   /**
+   * How far away from the anchor the popover i positioned
+   */
+  offset?: number;
+  /**
    * Element that popover will anchor to
    */
   anchorEl: Element | null;
@@ -66,6 +70,7 @@ const Popover = forwardRef<HTMLDivElement, PopoverProps>(
       children,
       placement = "right",
       className,
+      offset = 6,
       ...rest
     },
     ref
@@ -122,7 +127,7 @@ const Popover = forwardRef<HTMLDivElement, PopoverProps>(
           {
             name: "offset",
             options: {
-              offset: [0, 16],
+              offset: [0, offset + 10],
             },
           },
         ],

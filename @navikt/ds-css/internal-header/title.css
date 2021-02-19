@@ -12,12 +12,12 @@
   line-height: var(--navds-font-line-height-medium);
 }
 
-.navds-header__title > span > a {
+.navds-header__title > a {
   text-decoration: none;
   color: inherit;
 }
 
-.navds-header__title > span > a:focus {
+.navds-header__title > a:focus {
   box-shadow: var(--navds-shadow-focus-on-dark);
   outline: none;
 }

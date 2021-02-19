@@ -1,4 +1,4 @@
-.navds-internal-header-user-menu {
+.navds-dropdown-menu {
   margin: 0;
   display: flex;
   align-items: stretch;
@@ -12,28 +12,28 @@
   cursor: pointer;
 }
 
-.navds-internal-header-user-menu:hover {
+.navds-dropdown-menu:hover {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-.navds-internal-header-user-menu:focus {
+.navds-dropdown-menu:focus {
   box-shadow: inset var(--navds-shadow-focus-on-dark);
   outline: none;
 }
 
-.navds-internal-header-user-menu__icon-wrapper {
+.navds-dropdown-menu__icon-wrapper {
   display: flex;
   align-items: center;
   font-size: 1.2rem;
 }
 
-.navds-internal-header-user-menu__menu {
+.navds-dropdown-menu__menu {
   display: flex;
   flex-direction: column;
   padding: 0.5rem 0;
 }
 
-.navds-internal-header-user-menu-item {
+.navds-dropdown-menu-item {
   background: transparent;
   border: none;
   cursor: pointer;
@@ -47,7 +47,7 @@
   line-height: var(--navds-font-line-height-small);
 }
 
-.navds-internal-header-user-menu-item:hover,
-.navds-internal-header-user-menu-item:focus {
+.navds-dropdown-menu-item:hover,
+.navds-dropdown-menu-item:focus {
   background-color: var(--navds-color-gray-10);
 }

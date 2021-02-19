@@ -24,12 +24,18 @@ const InternalHeaderDropdownMenu = forwardRef<
       <button
         {...rest}
         ref={mergedRef}
-        className={cl("navds-header__dropdown-menu", className)}
+        className={cl("navds-internal-header-dropdown-menu", className)}
         onClick={() => setIsOpen((isOpen) => !isOpen)}
       >
-        <SystemFilled ref={setAnchorEl} />
+        <div
+          className="navds-internal-header-dropdown-menu__icon-wrapper"
+          ref={setAnchorEl}
+        >
+          <SystemFilled />
+        </div>
       </button>
       <Popover
+        offset={1}
         anchorEl={anchorEl}
         onClose={() => {
           if (buttonRef.current !== document.activeElement) {
@@ -39,7 +45,9 @@ const InternalHeaderDropdownMenu = forwardRef<
         open={isOpen}
         placement="bottom"
       >
-        <div className="navds-header__dropdown-menu__menu">{children}</div>
+        <div className="navds-internal-header-dropdown-menu__menu">
+          {children}
+        </div>
       </Popover>
     </>
   );

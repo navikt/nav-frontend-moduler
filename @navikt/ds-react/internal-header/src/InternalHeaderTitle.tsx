@@ -1,21 +1,24 @@
-import React, { forwardRef, HTMLAttributes, createElement } from "react";
+import React, { forwardRef, HTMLAttributes } from "react";
 import cl from "classnames";
 import "@navikt/ds-css/internal-header/index.css";
 import "@navikt/ds-css/typography/index.css";
+import { OverridableComponent } from "../../utils/OverridableComponent";
 
-export interface InternalHeaderTitleProps extends HTMLAttributes<HTMLElement> {
-  children?: React.ReactNode;
-  element?: keyof React.ReactHTML;
+export interface TypeMap {
+  props: HTMLAttributes<HTMLHeadingElement>;
+  defaultComponent: "h1";
 }
 
-const InternalHeaderTitle = forwardRef<HTMLElement, InternalHeaderTitleProps>(
-  ({ element = "h1", children, className, ...rest }, ref) =>
-    createElement(element, {
-      ...rest,
-      ref,
-      className: cl("navds-header__title", className),
-      children: <span>{children}</span>,
-    })
+const InternalHeaderTitle: OverridableComponent<TypeMap> = forwardRef(
+  ({ component: Component = "h1", children, className, ...rest }, ref) => (
+    <Component
+      {...rest}
+      ref={ref}
+      className={cl("navds-header__title", className)}
+    >
+      {children}
+    </Component>
+  )
 );
 
 export default InternalHeaderTitle;
