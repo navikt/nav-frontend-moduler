@@ -1,7 +1,6 @@
 import * as PT from "prop-types";
 import * as React from "react";
 import * as classNames from "classnames";
-import "nav-frontend-paneler-style";
 
 const cls = (className, border) =>
   classNames("panel", className, {
