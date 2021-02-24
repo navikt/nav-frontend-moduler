@@ -34,7 +34,8 @@
     "@navikt/ds-react",
     "@navikt/ds-icons",
     "@navikt/ds-tokens",
-    "./utilities/build/props-resolver"
+    "./utilities/build/props-resolver",
+    "examples/nextjs"
   ],
   "prettier": {},
   "eslintConfig": {
