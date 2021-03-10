@@ -66,3 +66,9 @@
 
   margin: 0 auto 0 0;
 }
+
+@media (max-width: 959px) {
+  .sidebar {
+    width: 0;
+  }
+}

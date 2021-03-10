@@ -13,15 +13,15 @@ const Layout = ({ children }: LayoutProps) => {
       <main className="main">
         <ContentContainer>
           <Grid className="contentWrapper">
-            <Cell xs={12} sm={12} lg={7}>
+            <Cell xs={12} sm={12} md={10} lg={7}>
               <div
                 style={{ width: "100%", height: "500px", background: "teal" }}
               >
                 {children}
               </div>
             </Cell>
-            <Cell xs={1} sm={1} lg={1} />
-            <Cell xs={12} sm={12} lg={3}>
+            <Cell xs={12} sm={1} md={2} lg={1} />
+            <Cell xs={12} sm={12} md={10} lg={4}>
               <div
                 style={{ width: "100%", height: "500px", background: "gray" }}
               >
