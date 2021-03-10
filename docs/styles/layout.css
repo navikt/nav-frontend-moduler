@@ -1,19 +1,19 @@
 .pageWrapper {
   padding: 0;
   margin: 0;
-  height: 100vh;
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
   grid-template-areas:
     "header header"
     "sidebar content";
+  height: 100vh;
 }
 
 .header {
   grid-area: header;
   display: flex;
-  z-index: 300;
+  z-index: 99;
   justify-content: space-between;
   min-height: auto;
   align-items: center;
@@ -22,6 +22,7 @@
   min-height: 5rem;
   background-color: #c30000;
   padding-left: 2.5rem;
+  box-shadow: 0px 0px 0px 2px #e7e9e9;
 }
 
 .header__link {

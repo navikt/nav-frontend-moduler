@@ -6,7 +6,7 @@ interface HeaderProps {
 
 const Header = ({ className, ...props }: HeaderProps) => {
   return (
-    <header className={`header ${className}`}>
+    <header className={`header`}>
       <button className="header__link">
         <NavLogo />
         <span className="header__link-title">NAV Designsystem</span>

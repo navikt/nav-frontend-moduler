@@ -21,5 +21,8 @@
     "rules": {
       "react/react-in-jsx-scope": "off"
     }
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^10.0.8"
   }
 }
