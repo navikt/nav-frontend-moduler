@@ -1,6 +1,6 @@
 import Header from "./header/Header";
 import Sidebar from "./sidebar/Sidebar";
-
+import { Grid, Cell, ContentContainer } from "@navikt/ds-react";
 interface LayoutProps {
   children?: React.ReactNode;
 }
@@ -11,7 +11,25 @@ const Layout = ({ children }: LayoutProps) => {
       <Header />
       <Sidebar />
       <main className="main">
-        <div className="contentWrapper">{children}</div>
+        <ContentContainer>
+          <Grid className="contentWrapper">
+            <Cell xs={12} sm={12} lg={7}>
+              <div
+                style={{ width: "100%", height: "500px", background: "teal" }}
+              >
+                {children}
+              </div>
+            </Cell>
+            <Cell xs={1} sm={1} lg={1} />
+            <Cell xs={12} sm={12} lg={3}>
+              <div
+                style={{ width: "100%", height: "500px", background: "gray" }}
+              >
+                TOC
+              </div>
+            </Cell>
+          </Grid>
+        </ContentContainer>
       </main>
     </div>
   );

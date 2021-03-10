@@ -4,8 +4,7 @@ import Layout from "../components/layout/Layout";
 import "../styles/theme.css";
 import "../styles/layout.css";
 import "../styles/globals.css";
-import "@navikt/ds-tokens";
-/* import "@navikt/ds-css/baseline/index.css"; */
+import "@navikt/ds-css";
 
 const Website = ({ Component, pageProps }) => {
   const route = useRouter();
@@ -17,7 +16,6 @@ const Website = ({ Component, pageProps }) => {
       </Head>
       <Layout route={route}>
         <Component {...pageProps} />
-        <System />
       </Layout>
     </>
   );
