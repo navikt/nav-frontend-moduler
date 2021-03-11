@@ -1,0 +1,58 @@
+.pre {
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow: auto;
+  width: calc(100vw - 2rem);
+  border-radius: 4px;
+  background-color: var(--navds-color-darkgray);
+  align-items: center;
+  display: flex;
+}
+
+.preWrapper {
+  position: relative;
+  align-items: center;
+  display: flex;
+}
+
+.terminal {
+  color: white;
+}
+
+.terminal::before {
+  content: "$ ";
+}
+
+.buttonBackground {
+  width: 3rem;
+  background-color: var(--navds-color-darkgray);
+  position: absolute;
+  right: 0;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  height: calc(100% - 3rem);
+  align-items: center;
+}
+
+.copyButton {
+  background-color: var(--navds-color-darkgray);
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border: none;
+  align-items: center;
+  display: inline-flex;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.copyButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.copyButton:focus {
+  outline: 2px solid white;
+  border-radius: 2px;
+  outline-offset: -2px;
+}
