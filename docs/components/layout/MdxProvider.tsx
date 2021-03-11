@@ -1,22 +1,20 @@
 import { MDXProvider } from "@mdx-js/react";
+import { Heading, Paragraph } from "@navikt/ds-react";
 
 const MdxWrapper = (props) => (
   <MDXProvider
-    components={
-      {
-        /* h1: Innholdstittel,
-      h2: Systemtittel,
-      h3: (props) => <Undertittel {...props} tag="h3" />,
-      a: Lenke,
+    components={{
+      h1: (props) => <Heading size="xxl" level={1} {...props} />,
+      h2: (props) => <Heading size="large" level={2} {...props} />,
+      h3: (props) => <Heading size="small" level={3} {...props} />,
+      p: (props) => <Paragraph size="medium" {...props} />,
+
+      /*a: Lenke,
       code: (props) => <Codeblock {...props} />,
       inlineCode: (props) => <InlineCode {...props} />,
-      Undertittel,
       InlineCode,
-      FileIcon,
-      Cog,
       Example, */
-      }
-    }
+    }}
     {...props}
   />
 );
