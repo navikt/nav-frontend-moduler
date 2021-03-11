@@ -1,30 +1,43 @@
 import { Button } from "@navikt/ds-react";
 
-# Heading
+# Button
 
-Tempor id fugiat consequat deserunt ad officia. Sint minim laboris ea aliquip enim adipisicing veniam occaecat sit consectetur in elit nostrud deserunt. Ea est eiusmod labore non Lorem veniam dolore eu.
+De fleste komponentene våre består av en React-pakke og en tilhørende Less-pakke. React-pakkene er avhengige av Less-pakkene, men ikke motsatt. Det betyr at du kan velge å installere kun Less-pakkene hvis du f.eks. vil bruke et Javascript-rammeverk som er inkompatibelt med React - eller hvis du av andre grunner ønsker å håndtere HTML og Javascript selv.
 
-## variant
+## Variant
 
-Proident dolore nostrud esse qui officia consequat cillum officia amet reprehenderit commodo. Veniam dolore mollit adipisicing cupidatat Lorem adipisicing elit reprehenderit do sint deserunt labore. Do voluptate cupidatat irure esse duis et nostrud exercitation esse dolore ad velit. Sunt fugiat ad veniam ut proident deserunt sit reprehenderit exercitation Lorem enim aliqua ea minim. Adipisicing do anim proident Lorem amet eu sunt sunt adipisicing sunt veniam minim duis sunt. Eiusmod velit commodo pariatur deserunt laborum.
+### Primary
 
-> Test
+Dette er hvordan en normal knapp skal se ut. De fleste knappene i løsningene våre skal se slik ut. Hvis du er i tvil om hvilken knapp du skal bruke, er det sikkert denne som er riktig.
 
-<Example component={<Button>Knapp</Button>} />
-<br />
-<br />
-<br />
-<Bash
-  code={`<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />`}
-/>
-<Bash
-  copy
-  code={`<link rel="stylesheet" href="https:00,700&disp00,700&disp00,700&disp//fonts.\ngoogleapi00,700&disp00,700&disp00,700&disps.com/c\nss?famil00,700&disp00,700&disp00,700&dispy=Robot\no:300,400,700&disp00,700&disp00\n,50000,700&disp00,700&disp00,700&disp00,700&disp,700&disp\nlay=swap" />`}
+<Example
+  component={<Button>Primary</Button>}
+  react={`<Button>Primary</Button>`}
 />
 
-<Bash code="yarn add @navikt/ds-react" terminal />
+### Secondary
 
-<Bash code="yarn add @navikt/ds-react" terminal copy />
-<Bash code="yarn add @navikt/ds-react" terminal copy />
-<Bash code="yarn add @navikt/ds-react" terminal copy />
-<Bash code="yarn add @navikt/ds-react" terminal copy />
+Denne knappen kan brukes som et alternativ til primary knapp ved behov.
+
+<Example
+  component={<Button variant="secondary">Secondary</Button>}
+  react={`<Button variant="secondary">Secondary</Button>`}
+/>
+
+### Action
+
+Denne knappen skal brukes der løsningen/siden har en tydelig hoved-/primær-funksjon (f.eks. "Lagre" eller "Send søknad"). Merk at det som regel bare skal finnes èn eneste hovedknapp på en og samme side. Et mulig unntak til denne regelen kan være inne i en modal-rute som legger seg oppå det øvrige innholdet hvor det er tillatt med en ekstra hoved- eller fare-knapp ved behov.
+
+<Example
+  component={<Button variant="action">Action</Button>}
+  react={`<Button variant="action">Action</Button>`}
+/>
+
+### Danger
+
+Denne knappen skal brukes på samme måte som hovedknapp, men bare der hoved-/primær-funksjonen kan føre til tap av viktig lagret informasjon (f.eks. "Slett") eller ellers bety svært negative konsekvenser hvis handlingen ikke var ønsket (f.eks. som en bekreftelse på at brukeren ikke lenger ønsker å motta ytelser).
+
+<Example
+  component={<Button variant="danger">Danger</Button>}
+  react={`<Button variant="danger">Danger</Button>`}
+/>

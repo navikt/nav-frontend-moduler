@@ -1,56 +1,57 @@
 import React, { useState } from "react";
 import Tabs from "./Tabs";
 import style from "./example.module.css";
-import cl from "classnames";
 import { renderToString } from "react-dom/server";
-import reactElementToJSXString from "react-element-to-jsx-string";
 import Bash from "../code/Bash";
-/* import Prettier from "prettier/standalone";
-import ParserBabel from "prettier/parser-babel"; */
-/* import format from 'prettier-format' */
-const beautify_html = require("js-beautify").html;
+import Prettier from "prettier/standalone";
+import ParserBabel from "prettier/parser-babel";
 
-type ExampleVersions = "Html" | "React";
+const prettierOptions = {
+  semi: true,
+  parser: "babel",
+  plugins: [ParserBabel],
+  jsxBracketSameLine: false,
+  printWidth: 30,
+};
 
 interface ExampleProps {
   component: React.ReactElement;
-  versions: ExampleVersions[];
+  react: string;
+  html?: boolean;
 }
 
 const Example = ({
   component: Component,
-  versions = ["React", "Html"],
+  react,
+  html = true,
   ...props
 }: ExampleProps) => {
   const [tab, setTab] = useState(0);
-
+  console.log(typeof react);
   const handleChange = (x: number) => {
     setTab(x);
   };
 
+  /* console.log(Prettier.format(react, prettierOptions).slice(0, -2)); */
   return (
     <div className={style.wrapper}>
       {Component}
-      <Tabs versions={versions} onChange={(x) => handleChange(x)} />
+      <Tabs html={html} onChange={(x) => handleChange(x)} />
       {tab === 0 && (
         <Bash
-          code={beautify_html(reactElementToJSXString(Component), {
-            indent_size: 2,
-            space_in_empty_paren: true,
-          })}
-          language="jsx"
+          code={Prettier.format(react, prettierOptions).slice(0, -2)}
+          language="html"
+          copy
         />
       )}
-      {tab === 1 && (
+      {html && tab === 1 && (
         <Bash
-          code={beautify_html(renderToString(Component), {
-            indent_size: 2,
-            space_in_empty_paren: true,
-            break_chained_methods: true,
-            good_stuff: true,
-            /* indent_level: 4, */
-          })}
+          code={Prettier.format(
+            renderToString(Component),
+            prettierOptions
+          ).slice(0, -2)}
           language="html"
+          copy
         />
       )}
     </div>
