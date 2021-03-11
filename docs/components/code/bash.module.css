@@ -7,6 +7,9 @@
   background-color: var(--navds-color-darkgray);
   align-items: center;
   display: flex;
+
+  /* Fixer pixelbug på høyre side av bash-panel */
+  box-shadow: inset -4px 0 0 var(--navds-color-darkgray);
 }
 
 .preWrapper {
@@ -31,8 +34,10 @@
   margin: 1rem 0;
   display: flex;
   justify-content: center;
-  height: calc(100% - 3rem);
+  height: calc(100% - 3rem - 0.5rem);
   align-items: center;
+  border-radius: 0.25rem;
+  box-shadow: -1rem 0 0.25rem 0 var(--navds-color-darkgray);
 }
 
 .copyButton {
