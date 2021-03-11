@@ -1,6 +1,7 @@
 import { MDXProvider } from "@mdx-js/react";
 import { Heading, Paragraph } from "@navikt/ds-react";
 import Bash from "../code/Bash";
+import Example from "../example/Example";
 
 const MdxWrapper = (props) => (
   <MDXProvider
@@ -10,6 +11,7 @@ const MdxWrapper = (props) => (
       h3: (props) => <Heading size="small" level={3} {...props} />,
       p: (props) => <Paragraph size="medium" {...props} />,
       Bash,
+      Example,
 
       /*a: Lenke,
       code: (props) => <Codeblock {...props} />,

@@ -3,7 +3,6 @@
   margin: 1rem 0;
   overflow: auto;
   width: calc(100vw - 2rem);
-  border-radius: 4px;
   background-color: var(--navds-color-darkgray);
   align-items: center;
   display: flex;
@@ -24,6 +23,7 @@
 
 .code {
   padding-right: 4rem;
+  color: white;
 }
 
 .terminal::before {
@@ -40,7 +40,6 @@
   justify-content: center;
   height: calc(100% - 3rem - 0.5rem);
   align-items: center;
-  border-radius: 0.25rem;
 }
 
 .copyButton {
@@ -61,6 +60,5 @@
 
 .copyButton:focus {
   outline: 2px solid white;
-  border-radius: 2px;
   outline-offset: -2px;
 }

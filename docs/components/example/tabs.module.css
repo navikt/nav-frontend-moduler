@@ -1,0 +1,29 @@
+.ul {
+  padding: 1rem 0;
+  margin: 0;
+  display: flex;
+  height: 3rem;
+}
+.li {
+  list-style: none;
+}
+.button {
+  color: var(--navds-color-blue-50);
+  border: none;
+  background: none;
+  padding: 0.5rem 1.5rem;
+  font-weight: var(--navds-font-weight-bold);
+}
+
+/* .button:hover {
+} */
+
+.button:focus {
+  outline: 2px solid var(--navds-color-blue-80);
+  outline-offset: -2px;
+}
+
+.buttonActive {
+  border-bottom: 4px solid var(--navds-color-blue-50);
+  color: var(--navds-color-darkgray);
+}

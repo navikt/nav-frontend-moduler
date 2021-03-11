@@ -8,6 +8,7 @@
     "header header"
     "sidebar content";
   height: 100vh;
+  background-color: #faf9f9;
 }
 
 .header {
@@ -68,7 +69,6 @@
 
 .content {
   width: 100%;
-  background-color: #fff; /* Temp */
 }
 
 @media (max-width: 959px) {
