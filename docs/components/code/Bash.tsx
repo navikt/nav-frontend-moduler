@@ -1,6 +1,7 @@
 import copy from "copy-to-clipboard";
 import Prism from "prismjs";
 import style from "./bash.module.css";
+import cl from "classnames";
 import { Files } from "@navikt/ds-icons";
 import { Popover } from "@navikt/ds-react";
 import { useEffect, useRef, useState } from "react";
@@ -47,7 +48,10 @@ const Bash = ({
     <div className={style.preWrapper}>
       <pre className={style.pre}>
         <code
-          className={`${copy && style.codeCopy} ${terminal && style.terminal}`}
+          className={cl(style.code, {
+            [style.codeCopy]: copy,
+            [style.terminal]: terminal,
+          })}
           {...props}
           dangerouslySetInnerHTML={{ __html: highlighted }}
         />

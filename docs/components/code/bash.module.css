@@ -22,6 +22,10 @@
   color: white;
 }
 
+.code {
+  padding-right: 4rem;
+}
+
 .terminal::before {
   content: "$ ";
 }
