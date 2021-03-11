@@ -5,6 +5,25 @@ import cl from "classnames";
 import { Files } from "@navikt/ds-icons";
 import { Popover } from "@navikt/ds-react";
 import { useEffect, useRef, useState } from "react";
+import "prismjs/components/prism-jsx.min";
+
+type PrismLanguages =
+  | "extend"
+  | "insertBefore"
+  | "DFS"
+  | "markup"
+  | "html"
+  | "mathml"
+  | "svg"
+  | "xml"
+  | "ssml"
+  | "atom"
+  | "rss"
+  | "css"
+  | "clike"
+  | "javascript"
+  | "js"
+  | "jsx";
 
 export const copyCode = (content) => {
   if (typeof content === "string") {
@@ -18,15 +37,17 @@ const Bash = ({
   code,
   terminal = false,
   copy = false,
+  language = "html",
   ...props
 }: {
   code: string;
   terminal?: boolean;
   copy?: boolean;
+  language?: PrismLanguages;
 }) => {
   const highlighted = terminal
     ? code
-    : Prism.highlight(code, Prism.languages.html, "html");
+    : Prism.highlight(code, Prism.languages[language], language);
 
   const buttonRef = useRef<HTMLButtonElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout>();
@@ -55,26 +76,31 @@ const Bash = ({
           {...props}
           dangerouslySetInnerHTML={{ __html: highlighted }}
         />
-        <div className={style.buttonBackground}>
-          <button
-            ref={buttonRef}
-            className={style.copyButton}
-            onClick={() => handleCopy()}
-          >
-            <Files />
-          </button>
-          <Popover
-            role="alert"
-            anchorEl={buttonRef.current}
-            open={openPopover}
-            onClose={() => setOpenPopover(false)}
-            size="small"
-            placement="auto-start"
-            /* arrow={false} */
-          >
-            Kode er kopiert
-          </Popover>
-        </div>
+        {copy && (
+          <>
+            <div className={style.buttonBackground}>
+              <button
+                ref={buttonRef}
+                className={style.copyButton}
+                onClick={() => handleCopy()}
+              >
+                <Files />
+              </button>
+              <Popover
+                role="alert"
+                anchorEl={buttonRef.current}
+                open={openPopover}
+                onClose={() => setOpenPopover(false)}
+                size="small"
+                placement="auto-start"
+                /* arrow={false} */
+              >
+                Kode er kopiert
+              </Popover>
+              )
+            </div>
+          </>
+        )}
       </pre>
     </div>
   );

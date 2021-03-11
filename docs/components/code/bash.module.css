@@ -41,7 +41,6 @@
   height: calc(100% - 3rem - 0.5rem);
   align-items: center;
   border-radius: 0.25rem;
-  box-shadow: -1rem 0 0.25rem 0 var(--navds-color-darkgray);
 }
 
 .copyButton {
