@@ -10,34 +10,30 @@ De fleste komponentene våre består av en React-pakke og en tilhørende Less-pa
 
 Dette er hvordan en normal knapp skal se ut. De fleste knappene i løsningene våre skal se slik ut. Hvis du er i tvil om hvilken knapp du skal bruke, er det sikkert denne som er riktig.
 
-<Example
-  component={<Button>Primary</Button>}
-  react={`<Button>Primary</Button>`}
-/>
+<Example>
+  <Button variant="primary">Primary</Button>
+</Example>
 
 ### Secondary
 
 Denne knappen kan brukes som et alternativ til primary knapp ved behov.
 
-<Example
-  component={<Button variant="secondary">Secondary</Button>}
-  react={`<Button variant="secondary">Secondary</Button>`}
-/>
+<Example>
+  <Button variant="secondary">Secondary</Button>
+</Example>
 
 ### Action
 
 Denne knappen skal brukes der løsningen/siden har en tydelig hoved-/primær-funksjon (f.eks. "Lagre" eller "Send søknad"). Merk at det som regel bare skal finnes èn eneste hovedknapp på en og samme side. Et mulig unntak til denne regelen kan være inne i en modal-rute som legger seg oppå det øvrige innholdet hvor det er tillatt med en ekstra hoved- eller fare-knapp ved behov.
 
-<Example
-  component={<Button variant="action">Action</Button>}
-  react={`<Button variant="action">Action</Button>`}
-/>
+<Example>
+  <Button variant="action">Action</Button>
+</Example>
 
 ### Danger
 
 Denne knappen skal brukes på samme måte som hovedknapp, men bare der hoved-/primær-funksjonen kan føre til tap av viktig lagret informasjon (f.eks. "Slett") eller ellers bety svært negative konsekvenser hvis handlingen ikke var ønsket (f.eks. som en bekreftelse på at brukeren ikke lenger ønsker å motta ytelser).
 
-<Example
-  component={<Button variant="danger">Danger</Button>}
-  react={`<Button variant="danger">Danger</Button>`}
-/>
+<Example>
+  <Button variant="danger">Danger</Button>
+</Example>
