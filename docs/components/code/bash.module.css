@@ -3,12 +3,12 @@
   margin: 1rem 0;
   overflow: auto;
   width: calc(100vw - 2rem);
-  background-color: var(--navds-color-darkgray);
+  background-color: var(--bg-code);
   align-items: center;
   display: flex;
 
   /* Fixer pixelbug på høyre side av bash-panel */
-  box-shadow: inset -4px 0 0 var(--navds-color-darkgray);
+  box-shadow: inset -4px 0 0 var(--bg-code);
 }
 
 .preWrapper {
@@ -18,12 +18,12 @@
 }
 
 .terminal {
-  color: white;
+  color: var(--color-code);
 }
 
 .code {
   padding-right: 4rem;
-  color: white;
+  color: var(--color-code);
 }
 
 .terminal::before {
@@ -32,7 +32,7 @@
 
 .buttonBackground {
   width: 3rem;
-  background-color: var(--navds-color-darkgray);
+  background-color: var(--bg-code);
   position: absolute;
   right: 0;
   margin: 1rem 0;
@@ -43,7 +43,7 @@
 }
 
 .copyButton {
-  background-color: var(--navds-color-darkgray);
+  background-color: var(--bg-code);
   color: white;
   font-size: 1.5rem;
   padding: 0.5rem;
@@ -59,6 +59,6 @@
 }
 
 .copyButton:focus {
-  outline: 2px solid white;
-  outline-offset: -2px;
+  outline: var(--outline-code);
+  outline-offset: var(--outline-offset);
 }

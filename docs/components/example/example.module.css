@@ -1,5 +1,12 @@
 .wrapper {
   padding: 1rem;
   padding-bottom: 0;
-  background-color: white;
+  background-color: var(--bg-secondary);
+  margin-bottom: 3rem;
+  outline: var(--outline);
+}
+
+.preview {
+  border-bottom: 2px solid var(--code-divider);
+  padding-bottom: 3rem;
 }

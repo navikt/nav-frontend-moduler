@@ -19,13 +19,15 @@
     "@svgr/webpack": "^5.5.0",
     "uuid": "^8.3.2",
     "copy-to-clipboard": "^3.3.1",
+    "react-responsive": "^8.2.0",
+    "react-use-keypress": "^1.2.0",
     "prismjs": "^1.23.0",
     "react-element-to-jsx-string": "^14.3.2",
-    "js-beautify": "^1.13.5",
     "prettier": "2.2.1",
     "@mdx-js/react": "^1.6.22",
     "@navikt/ds-css": "^0.2.0",
-    "@navikt/ds-react": "^0.2.0"
+    "@navikt/ds-react": "^0.2.0",
+    "@navikt/ds-icons": "^0.2.0"
   },
   "eslintConfig": {
     "rules": {

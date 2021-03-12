@@ -4,7 +4,6 @@ import Layout from "../components/layout/Layout";
 import "../styles/theme.css";
 import "../styles/layout.css";
 import "../styles/globals.css";
-import "../styles/toc.css";
 import "../styles/prismjs.css";
 import "@navikt/ds-css";
 

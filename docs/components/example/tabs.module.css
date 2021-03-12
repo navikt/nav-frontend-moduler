@@ -1,6 +1,6 @@
 .ul {
   padding: 1rem 0;
-  margin: 2rem 0 0 0;
+  margin: 0;
   display: flex;
   height: 3rem;
 }
@@ -8,22 +8,24 @@
   list-style: none;
 }
 .button {
-  color: var(--navds-color-blue-50);
+  color: var(--tab-color);
   border: none;
   background: none;
   padding: 0.5rem 1.5rem;
   font-weight: var(--navds-font-weight-bold);
 }
 
-/* .button:hover {
-} */
+.button:hover {
+  border-bottom: 4px solid var(--navds-color-darkgray);
+  color: var(--navds-color-darkgray);
+}
 
 .button:focus {
-  outline: 2px solid var(--navds-color-blue-80);
-  outline-offset: -2px;
+  outline: var(--outline-focus);
+  outline-offset: var(--outline-offset);
 }
 
 .buttonActive {
-  border-bottom: 4px solid var(--navds-color-blue-50);
-  color: var(--navds-color-darkgray);
+  border-bottom: var(--tab-border);
+  color: var(--tab-color-active);
 }

@@ -3,15 +3,37 @@ import Sidebar from "./sidebar/Sidebar";
 import Mdx from "./MdxProvider";
 import Toc from "../toc/Toc";
 import { Grid, Cell, ContentContainer } from "@navikt/ds-react";
+import { useMediaQuery } from "react-responsive";
+import useKeypress from "react-use-keypress";
+import { useEffect, useState } from "react";
+
 interface LayoutProps {
   children?: React.ReactNode;
 }
 
 const Layout = ({ children }: LayoutProps) => {
+  const [sidebar, setSidebar] = useState(true);
+
+  const small = useMediaQuery({
+    query: "(max-width: 959px)",
+  });
+
+  useKeypress("Escape", () => {
+    setSidebar(false);
+  });
+
+  useEffect(() => {
+    setSidebar(!small);
+  }, [small]);
+  /* console.log(sidebar); */
   return (
     <div className="pageWrapper lightTheme">
-      <Header />
-      <Sidebar />
+      <Header sidebar={sidebar} onSidebarChange={(x) => setSidebar(x)} />
+      <Sidebar
+        sidebar={sidebar}
+        small={small}
+        onSidebarChange={(x) => setSidebar(x)}
+      />
       <main className="main">
         <ContentContainer>
           <Grid className="contentWrapper">

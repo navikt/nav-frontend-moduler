@@ -6,6 +6,7 @@ import Bash from "../code/Bash";
 import Prettier from "prettier/standalone";
 import ParserBabel from "prettier/parser-babel";
 import reactElementToJSXString from "react-element-to-jsx-string";
+import * as DSReact from "@navikt/ds-react";
 
 const prettierOptions = {
   semi: true,
@@ -18,9 +19,10 @@ const prettierOptions = {
 interface ExampleProps {
   html?: boolean;
   children: React.ReactElement;
+  text?: string;
 }
 
-const Example = ({ html = true, children, ...props }: ExampleProps) => {
+const Example = ({ html = true, children, text, ...props }: ExampleProps) => {
   const [tab, setTab] = useState(0);
   const handleChange = (x: number) => {
     setTab(x);
@@ -48,14 +50,15 @@ const Example = ({ html = true, children, ...props }: ExampleProps) => {
 
   return (
     <div className={style.wrapper}>
-      {children}
+      <div className={style.preview}>{children}</div>
       <Tabs html={html} onChange={(x) => handleChange(x)} />
       {tab === 0 && (
         <Bash
           code={Prettier.format(
-            reactElementToJSXString(parsed, {
-              filterProps: ["mdxType", "originalType"],
-            }),
+            text ||
+              reactElementToJSXString(parsed, {
+                filterProps: ["mdxType", "originalType"],
+              }),
             prettierOptions
           ).slice(0, -2)}
           language="html"

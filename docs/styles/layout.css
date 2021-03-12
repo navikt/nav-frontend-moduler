@@ -8,20 +8,19 @@
     "header header"
     "sidebar content";
   height: 100vh;
-  background-color: #faf9f9;
+  background-color: var(--bg-primary);
 }
 
 .header {
   grid-area: header;
+  width: 100vw;
   display: flex;
   z-index: 99;
-  justify-content: space-between;
-  min-height: auto;
+  /* justify-content: space-between; */
   align-items: center;
   color: #fff;
-  min-height: 5rem;
+  height: 5rem;
   background-color: #c30000;
-  padding-left: 2.5rem;
 }
 
 .header__link {
@@ -31,6 +30,39 @@
   align-items: center;
   column-gap: 3rem;
   height: 100%;
+  flex-shrink: 0;
+}
+
+.header__icon {
+  color: #fff;
+  font-size: 1.5rem;
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sidebar__icon {
+  color: var(--navds-color-blue-50);
+  height: 5rem;
+  width: 5rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  align-items: center;
+}
+
+.sidebar__icon:focus {
+  outline: 2px solid var(--navds-color-blue-50);
+  outline-offset: -2px;
+}
+
+.header__icon--hidden {
+  visibility: hidden;
 }
 
 .header__link:focus {
@@ -50,8 +82,8 @@
   grid-area: sidebar;
   flex-direction: column;
   width: 300px;
-  background-color: #fff;
-  box-shadow: inset -2px 0px 0px #e7e9e9;
+  background-color: var(--bg-secondary);
+  box-shadow: inset -2px 0px 0px var(--sidebar-shadow);
   flex-grow: 1;
 }
 
@@ -73,6 +105,48 @@
 
 @media (max-width: 959px) {
   .sidebar {
-    width: 0;
+    display: none;
   }
+}
+
+@media (max-width: 447px) {
+  .header__link {
+    column-gap: 1rem;
+  }
+}
+
+.sidebar__mobile {
+  z-index: 999;
+  display: flex;
+  background-color: var(--bg-secondary);
+  flex-direction: column;
+  color: var(--text-color);
+  overflow-y: auto;
+
+  position: fixed;
+  left: -300px;
+  min-height: 100vh;
+  border-right: var(--sidebar-divider);
+}
+
+.sidebar__mobile--open {
+  transition: transform 250ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
+  transform: translateX(100%);
+}
+
+.sidebar--overlay {
+  display: block;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0);
+  position: fixed;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  transition: background 0.15s linear;
+}
+
+.sidebar--overlay--fade {
+  background: rgba(0, 0, 0, 0.5);
 }
