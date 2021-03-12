@@ -1,3 +1,7 @@
+:root {
+  --bg-primary: #faf9f9;
+}
+
 .darkTheme {
   --theme: "dark";
 }
@@ -7,7 +11,7 @@
   --bg-primary: #faf9f9;
   --bg-secondary: #fff;
   --sidebar-shadow: #e7e9e9;
-  --outline: 1px solid var(--navds-color-darkgray);
+  --outline: 1px solid var(--navds-color-gray-40);
   --tab-color: var(--navds-color-blue-50);
   --tab-color-active: var(--navds-color-darkgray);
   --tab-border: 4px solid var(--navds-color-blue-50);

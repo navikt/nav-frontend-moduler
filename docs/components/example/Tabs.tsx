@@ -17,16 +17,24 @@ const Tabs = ({ onChange, html = true, ...props }: TabsProps) => {
   };
   return (
     <ul className={style.ul}>
-      {["React", html && "HTML/CSS"].map((version, x) => (
-        <li key={uuid()} className={style.li}>
+      <li className={style.li}>
+        <button
+          className={cl(style.button, { [style.buttonActive]: 0 === tab })}
+          onClick={() => handleClick(0)}
+        >
+          {"React"}
+        </button>
+      </li>
+      {html && (
+        <li className={style.li}>
           <button
-            className={cl(style.button, { [style.buttonActive]: x === tab })}
-            onClick={() => handleClick(x)}
+            className={cl(style.button, { [style.buttonActive]: 1 === tab })}
+            onClick={() => handleClick(1)}
           >
-            {version}
+            {"HTML/CSS"}
           </button>
         </li>
-      ))}
+      )}
     </ul>
   );
 };

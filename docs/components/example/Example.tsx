@@ -6,7 +6,6 @@ import Bash from "../code/Bash";
 import Prettier from "prettier/standalone";
 import ParserBabel from "prettier/parser-babel";
 import reactElementToJSXString from "react-element-to-jsx-string";
-import * as DSReact from "@navikt/ds-react";
 
 const prettierOptions = {
   semi: true,
@@ -17,12 +16,12 @@ const prettierOptions = {
 };
 
 interface ExampleProps {
-  html?: boolean;
-  children: React.ReactElement;
+  children?: React.ReactElement;
+  html?: string;
   text?: string;
 }
 
-const Example = ({ html = true, children, text, ...props }: ExampleProps) => {
+const Example = ({ html, children, text, ...props }: ExampleProps) => {
   const [tab, setTab] = useState(0);
   const handleChange = (x: number) => {
     setTab(x);
@@ -45,42 +44,48 @@ const Example = ({ html = true, children, text, ...props }: ExampleProps) => {
     });
   };
 
-  let parsed = recursiveMap(children);
-  parsed = parsed.length > 1 ? <>{parsed}</> : parsed[0];
+  const parseChildren = () => {
+    const parsed = recursiveMap(children);
+    return parsed.length > 1 ? <>{parsed}</> : parsed[0];
+  };
 
   return (
     <div className={style.wrapper}>
-      <div className={style.preview}>{children}</div>
-      <Tabs html={html} onChange={(x) => handleChange(x)} />
+      {!!children && <div className={style.preview}>{children}</div>}
+      <Tabs html={!!html || !!children} onChange={(x) => handleChange(x)} />
       {tab === 0 && (
         <Bash
           code={Prettier.format(
             text ||
-              reactElementToJSXString(parsed, {
-                filterProps: ["mdxType", "originalType"],
-              }),
+              (!!children &&
+                reactElementToJSXString(parseChildren(), {
+                  filterProps: ["mdxType", "originalType"],
+                })) ||
+              "",
             prettierOptions
           ).slice(0, -2)}
-          language="html"
+          language="jsx"
           copy
         />
       )}
 
-      {html && tab === 1 && (
+      {(!!html || !!children) && tab === 1 && (
         <Bash
           code={Prettier.format(
-            renderToString(
-              React.Children.count(children) > 1 ? (
-                <div>{children}</div>
-              ) : (
-                children
-              )
-            ),
+            html ||
+              (!!children &&
+                renderToString(
+                  React.Children.count(children) > 1 ? (
+                    <div>{children}</div>
+                  ) : (
+                    children
+                  )
+                )),
             prettierOptions
           )
             .slice(0, -2)
             .replace(` data-reactroot=""`, "")}
-          language="html"
+          language="jsx"
           copy
         />
       )}

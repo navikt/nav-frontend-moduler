@@ -1,6 +1,6 @@
 .pre {
   padding: 1rem;
-  margin: 1rem 0;
+  margin: 1rem 0 0 0;
   overflow: auto;
   width: calc(100vw - 2rem);
   background-color: var(--bg-code);

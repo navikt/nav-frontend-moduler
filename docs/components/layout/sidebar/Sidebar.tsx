@@ -36,7 +36,6 @@ const Sidebar = ({
           <button
             onClick={() => onSidebarChange(!sidebar)}
             className={cl("sidebar__icon")}
-            /* tabIndex={!sidebar ? 0 : -1} */
           >
             <Close />
           </button>
