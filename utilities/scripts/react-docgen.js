@@ -1,5 +1,6 @@
 const glob = require("glob");
 const fs = require("fs");
+const { exit } = require("process");
 const docgen = require("react-docgen-typescript").withDefaultConfig({
   propFilter(prop) {
     if (prop.parent) {
@@ -50,7 +51,6 @@ try {
     });
     groups.push({ name: current, files: [file, ...matching] });
   }
-
   /* Parses all the given typescript files */
   const docs = groups.map((group) => {
     const doc = docgen.parse(group.files);

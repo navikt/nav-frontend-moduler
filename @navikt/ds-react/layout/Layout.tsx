@@ -7,9 +7,8 @@ import React, {
 } from "react";
 import { default as Section, SectionProps } from "./Section";
 
-export interface LayoutWithSubComponents
-  extends ForwardRefExoticComponent<LayoutProps> {
-  Section: ForwardRefExoticComponent<SectionProps>;
+export interface LayoutWithSubComponents {
+  Section?: ForwardRefExoticComponent<SectionProps>;
 }
 
 export interface LayoutProps extends HTMLAttributes<HTMLElement> {
@@ -17,9 +16,11 @@ export interface LayoutProps extends HTMLAttributes<HTMLElement> {
   className?: string;
 }
 
-const Layout = forwardRef<HTMLDivElement, LayoutProps>(
+const Layout: ForwardRefExoticComponent<LayoutProps> &
+  LayoutWithSubComponents = forwardRef<HTMLDivElement, LayoutProps>(
   ({ children, className, ...rest }, ref) => {
     const columns = Children.count(children);
+
     return (
       <div
         ref={ref}
@@ -34,7 +35,8 @@ const Layout = forwardRef<HTMLDivElement, LayoutProps>(
       </div>
     );
   }
-) as LayoutWithSubComponents;
+);
 
 Layout.Section = Section;
+console.log(Layout);
 export default Layout;
