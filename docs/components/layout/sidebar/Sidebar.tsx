@@ -1,6 +1,7 @@
 import Link from "next/link";
 import cl from "classnames";
 import { Close } from "@navikt/ds-icons";
+import style from "../layout.module.css";
 
 interface SidebarProps {
   classname?: string;
@@ -15,33 +16,32 @@ const Sidebar = ({
   onSidebarChange,
   ...props
 }: SidebarProps) => {
-  console.log(sidebar);
   return (
     <>
       {sidebar && small && (
         <div
           onClick={() => onSidebarChange(false)}
-          className={cl("sidebar--overlay", {
-            "sidebar--overlay--fade": sidebar,
+          className={cl(style["sidebar--overlay"], {
+            [style["sidebar--overlay--fade"]]: sidebar,
           })}
         />
       )}
       <div
-        className={cl("sidebar", {
-          sidebar__mobile: small,
-          "sidebar__mobile--open": small && sidebar,
+        className={cl(style.sidebar, {
+          [style.sidebar__mobile]: small,
+          [style["sidebar__mobile--open"]]: small && sidebar,
         })}
       >
         {small && sidebar && (
           <button
             onClick={() => onSidebarChange(!sidebar)}
-            className={cl("sidebar__icon")}
+            className={style.sidebar__icon}
           >
             <Close />
           </button>
         )}
         <Link href="/">Home</Link>
-        <Link href="/komponenter">Komponenter</Link>
+        <Link href="/komponenter">KomponenterKomponenterKompo</Link>
         <Link href="/komponenter/button">Button</Link>
       </div>
     </>

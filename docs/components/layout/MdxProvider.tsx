@@ -1,7 +1,8 @@
 import { MDXProvider } from "@mdx-js/react";
 import { Heading, Paragraph } from "@navikt/ds-react";
 import Bash from "../code/Bash";
-import Example from "../example/Example";
+import Preview from "../code-preview/Preview";
+import Proptable from "../proptable/Proptable";
 import Npm from "../npm/Npm";
 /* import { Button } from "@navikt/ds-react"; */
 
@@ -13,8 +14,9 @@ const MdxWrapper = (props) => (
       h3: (props) => <Heading size="small" level={3} {...props} />,
       p: (props) => <Paragraph size="medium" {...props} />,
       Bash,
-      Example,
+      Preview,
       Npm,
+      Proptable,
     }}
     {...props}
   />

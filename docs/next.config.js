@@ -17,6 +17,15 @@ const loadPackage = () => {
     });
 };
 
+const loadReactDocs = () => {
+  try {
+    const docs = require("../react-docgen.json");
+    return docs;
+  } catch {
+    return [];
+  }
+};
+
 module.exports = withMDX({
   pageExtensions: ["js", "jsx", "mdx"],
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
@@ -27,6 +36,7 @@ module.exports = withMDX({
     return config;
   },
   publicRuntimeConfig: {
-    staticFolder: loadPackage(),
+    packages: loadPackage(),
+    reactDocs: loadReactDocs(),
   },
 });

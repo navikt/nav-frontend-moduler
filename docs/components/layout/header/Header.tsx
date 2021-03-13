@@ -1,6 +1,7 @@
 import NavLogo from "../../assets/navLogo.svg";
 import { HamburgerFilled } from "@navikt/ds-icons";
 import cl from "classnames";
+import style from "../layout.module.css";
 
 interface HeaderProps {
   className?: string;
@@ -15,19 +16,19 @@ const Header = ({
   ...props
 }: HeaderProps) => {
   return (
-    <header className={`header`}>
+    <header className={style.header}>
       <button
         onClick={() => onSidebarChange(!sidebar)}
-        className={cl("header__link", "header__icon", {
-          "header__icon--hidden": sidebar,
+        className={cl(style.header__link, style.header__icon, {
+          [style["header__icon--hidden"]]: sidebar,
         })}
         tabIndex={!sidebar ? 0 : -1}
       >
         <HamburgerFilled />
       </button>
-      <button className="header__link">
+      <button className={style.header__link}>
         <NavLogo />
-        <span className="header__link-title">NAV Designsystem</span>
+        <span className={style["header__link-title"]}>NAV Designsystem</span>
       </button>
     </header>
   );

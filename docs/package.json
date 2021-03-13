@@ -25,6 +25,7 @@
     "react-element-to-jsx-string": "^14.3.2",
     "prettier": "2.2.1",
     "@mdx-js/react": "^1.6.22",
+    "nav-frontend-tabell-style": "^1.0.7",
     "@navikt/ds-css": "^0.2.0",
     "@navikt/ds-react": "^0.2.0",
     "@navikt/ds-icons": "^0.2.0"
