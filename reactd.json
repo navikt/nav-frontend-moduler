@@ -1,0 +1,24 @@
+{
+  "description": "",
+  "displayName": "Layout",
+  "methods": [],
+  "props": {
+    "testClassa": {
+      "type": { "name": "bool" },
+      "required": false,
+      "description": "",
+      "defaultValue": { "value": "false", "computed": false }
+    },
+    "children": {
+      "type": { "name": "node" },
+      "required": false,
+      "description": ""
+    },
+    "className": {
+      "type": { "name": "string" },
+      "required": false,
+      "description": "",
+      "defaultValue": { "value": "\"\"", "computed": false }
+    }
+  }
+}

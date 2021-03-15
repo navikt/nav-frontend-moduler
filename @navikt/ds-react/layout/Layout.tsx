@@ -5,20 +5,22 @@ import React, {
   ForwardRefExoticComponent,
   HTMLAttributes,
 } from "react";
+import PropTypes from "prop-types";
 import { default as Section, SectionProps } from "./Section";
 
-export interface LayoutWithSubComponents {
-  Section?: ForwardRefExoticComponent<SectionProps>;
+export interface LayoutWithSubComponents
+  extends ForwardRefExoticComponent<LayoutProps> {
+  Section: ForwardRefExoticComponent<SectionProps>;
 }
 
 export interface LayoutProps extends HTMLAttributes<HTMLElement> {
-  children?: React.ReactNode;
+  children: React.ReactNode;
+  testClassa: Boolean;
   className?: string;
 }
 
-const Layout: ForwardRefExoticComponent<LayoutProps> &
-  LayoutWithSubComponents = forwardRef<HTMLDivElement, LayoutProps>(
-  ({ children, className, ...rest }, ref) => {
+const Layout = forwardRef<HTMLDivElement, LayoutProps>(
+  ({ testClassa = false, children, className = "", ...rest }, ref) => {
     const columns = Children.count(children);
 
     return (
@@ -35,8 +37,13 @@ const Layout: ForwardRefExoticComponent<LayoutProps> &
       </div>
     );
   }
-);
+) as LayoutWithSubComponents;
+Layout.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+  testClassa: PropTypes.bool.isRequired,
+};
 
 Layout.Section = Section;
-console.log(Layout);
+
 export default Layout;

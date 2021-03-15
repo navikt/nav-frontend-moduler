@@ -44,10 +44,12 @@ const Preview = ({
       .slice(0, -2)
       .replace(` data-reactroot=""`, "");
 
+  const tabs = !hideHtml || !!children ? ["REACT", "HTML/CSS"] : ["REACT"];
+
   return (
     <div className={style.wrapper}>
       {!!children && <div className={style.preview}>{children}</div>}
-      <Tabs html={!hideHtml || !!children} onChange={(x) => handleChange(x)} />
+      <Tabs tabs={tabs} onChange={(x) => handleChange(x)} />
       {tab === 0 && <Bash code={reactFormat} language="jsx" copy />}
 
       {(!hideHtml || !!children) && tab === 1 && (

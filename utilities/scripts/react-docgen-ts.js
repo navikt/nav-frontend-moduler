@@ -1,7 +1,16 @@
 const glob = require("glob");
 const fs = require("fs");
-const docgen = require("react-docgen");
-const { exit } = require("process");
+const docgen = require("react-docgen-typescript").withDefaultConfig({
+  propFilter(prop) {
+    if (prop.parent) {
+      if (prop.name === "className") {
+        return true;
+      }
+      return !prop.parent.fileName.includes("node_modules");
+    }
+    return true;
+  },
+});
 
 const findMatch = (file) => {
   if (file.includes("nav-frontend-")) {
@@ -17,13 +26,9 @@ try {
   const newComponents = glob.sync("@navikt/ds-react/**/*.tsx");
   const oldComponents = glob.sync("packages/**/src/*.tsx");
   const files = [...newComponents, ...oldComponents].filter(
-    (file) => !file.includes("stories") && !file.includes("index")
+    (file) => !file.includes("stories")
   );
 
-  const docs = docgen.parse(files);
-  console.log(docs);
-
-  /*
   const found = [];
   const groups = [];
   for (const file of files) {
@@ -45,7 +50,7 @@ try {
     });
     groups.push({ name: current, files: [file, ...matching] });
   }
-
+  /* Parses all the given typescript files */
   const docs = groups.map((group) => {
     const doc = docgen.parse(group.files);
     return {
@@ -56,7 +61,7 @@ try {
     };
   });
 
-  fs.writeFileSync("./react-docgen.json", JSON.stringify(docs)); */
+  fs.writeFileSync("./react-docgen.json", JSON.stringify(docs));
 } catch (e) {
   console.error(e);
   console.log("Failed in generating docgen");
