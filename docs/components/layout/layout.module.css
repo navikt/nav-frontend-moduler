@@ -88,13 +88,18 @@
 .contentWrapper {
   grid-area: content;
   overflow-y: auto;
-  overflow: visible;
-  margin: 0 auto 0 0;
   width: 100%;
+  /* margin: 0 auto 0 0; */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
 
 .content {
   width: 100%;
+  max-width: 520px;
 }
 
 @media (max-width: 959px) {
