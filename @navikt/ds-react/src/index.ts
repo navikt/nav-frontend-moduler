@@ -11,6 +11,7 @@ export {
 export { Accordion, AccordionProps } from "./accordion/index";
 export { Alert, AlertProps } from "./alert/index";
 export { Button, ButtonProps } from "./button/index";
+export { Chevron } from "./chevron";
 export {
   ContentContainer,
   ContentContainerProps,
