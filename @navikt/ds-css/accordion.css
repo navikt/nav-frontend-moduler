@@ -29,14 +29,6 @@
   margin-left: 1rem;
 }
 
-.navds-accordion__chevron--up {
-  transform: rotateZ(-180deg);
-}
-
-.navds-accordion__chevron--down {
-  transform: rotateZ(0deg);
-}
-
 .navds-accordion__button {
   padding: 1rem;
   border-radius: 4px;
