@@ -3,8 +3,10 @@ import React, {
   HTMLAttributes,
   useCallback,
   useEffect,
+  useRef,
 } from "react";
 import cl from "classnames";
+import mergeRefs from "react-merge-refs";
 
 export interface PopoverBaseProps extends HTMLAttributes<HTMLDivElement> {
   /**
@@ -42,6 +44,8 @@ const PopoverBase = forwardRef<HTMLDivElement, PopoverBaseProps>(
     { className, children, open, onClose, position = { x: 0, y: 0 }, ...rest },
     ref
   ) => {
+    const popoverRef = useRef<HTMLDivElement | null>(null);
+    const mergedRef = mergeRefs([popoverRef, ref]);
     const close = useCallback(() => open && onClose(), [open, onClose]);
 
     useEventLister(
@@ -49,10 +53,22 @@ const PopoverBase = forwardRef<HTMLDivElement, PopoverBaseProps>(
       useCallback((e: KeyboardEvent) => e.key === "Escape" && close(), [close])
     );
 
+    useEventLister(
+      "click",
+      useCallback(
+        (e: MouseEvent) => {
+          if (!popoverRef.current?.contains(e.target as Node)) {
+            close();
+          }
+        },
+        [close]
+      )
+    );
+
     const newPosition = { x: 0, y: 0, ...position };
     return (
       <div
-        ref={ref}
+        ref={mergedRef}
         className={cl("navds-popover", className, {
           "navds-popover--hidden": !open,
         })}
