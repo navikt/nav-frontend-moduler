@@ -68,7 +68,7 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 .yarn/*
-!.yarn/cache
+.yarn/cache
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
