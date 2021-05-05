@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@types/classnames": "^2.2.3",
-    "@types/react": "15.0.23 || ^16.0.0",
+    "@types/react": "^17.0.5",
     "classnames": "^2.2.5",
     "nav-frontend-chevron-style": "^1.0.4",
     "prop-types": "^15.5.10",

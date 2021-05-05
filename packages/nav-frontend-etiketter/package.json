@@ -17,6 +17,7 @@
     "watch": "tsc --watch -p tsconfig.json"
   },
   "devDependencies": {
+    "@types/react": "^17.0.5",
     "classnames": "^2.2.5",
     "nav-frontend-core": "^5.1.1",
     "nav-frontend-etiketter-style": "^1.1.1",

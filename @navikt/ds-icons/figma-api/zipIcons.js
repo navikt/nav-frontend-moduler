@@ -1,4 +1,4 @@
-import zipdir from "zip-dir";
+const zipdir = require("zip-dir");
 
 const zipDir = async (dir, name) => {
   await zipdir(dir, { saveTo: name }, function (err, buffer) {

@@ -20,6 +20,7 @@
     "react": "^16.8.0 || ^17.0.0"
   },
   "devDependencies": {
+    "@types/react": "^17.0.5",
     "classnames": "^2.2.5",
     "nav-frontend-js-utils": "^1.0.17",
     "nav-frontend-toggle-style": "^1.1.2",

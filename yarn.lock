@@ -3645,10 +3645,11 @@ __metadata:
     copyfiles: ^2.4.1
     dotenv: ^8.2.0
     lodash.kebabcase: ^4.1.1
-    lodash.startcase: 4.4.0
+    lodash.startcase: ^4.4.0
+    p-limit: ^3.1.0
     react: ^16.8.0 || ^17.0.0
-    rimraf: 3.0.2
-    sharp: 0.27.1
+    rimraf: ^3.0.2
+    sharp: ^0.28.1
     zip-dir: ^2.0.0
   peerDependencies:
     react: ^16.8.0 || ^17.0.0
@@ -3661,14 +3662,17 @@ __metadata:
   dependencies:
     "@navikt/ds-icons": ^0.2.2
     "@popperjs/core": ^2.5.4
+    "@types/react": ^17.0.5
     classnames: ^2.2.6
     copy-to-clipboard: ^3.3.1
     copyfiles: ^2.4.1
+    react: ^17.0.0
     react-collapse: ^5.1.0
     react-merge-refs: ^1.1.0
     react-modal: 3.12.1
     react-popper: ^2.2.4
     react-router-dom: ^5.2.0
+    typescript: ^3.4.3
     uuid: ^8.3.2
   peerDependencies:
     react: ^16.8.0 || ^17.0.0
@@ -5708,17 +5712,6 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: 5bcaabadc90a23ad9008540eae98a5819b638c4cf1b968adc67be47d6a8dc8cb100061d877dae97618fb275e405dc484b37154080c7ac0ea7df5efcdd8f98c24
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:15.0.23 || ^16.0.0":
-  version: 16.14.5
-  resolution: "@types/react@npm:16.14.5"
-  dependencies:
-    "@types/prop-types": "*"
-    "@types/scheduler": "*"
-    csstype: ^3.0.2
-  checksum: 76840cce4dae25a17b1f35950bb232b0bc98beceb45766695f4b0226758aff346cebd3830ffe5f67c3e0030ac24d3ea899750c46e49ee405a2b6d72e87a855ed
   languageName: node
   linkType: hard
 
@@ -21084,7 +21077,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"lodash.startcase@npm:4.4.0":
+"lodash.startcase@npm:^4.4.0":
   version: 4.4.0
   resolution: "lodash.startcase@npm:4.4.0"
   checksum: 38d3e4116d795f0d6423b86a5da8a10448aa76b812a2a0b074ef2a55b49522fe82ce3bca727a025021d90cb7e88d4ed6880015b5c6cdb0bdf5333552d8541833
@@ -22878,7 +22871,6 @@ fsevents@^1.2.7:
     stylelint: ^13.7.2
     stylelint-config-prettier: ^8.0.2
     stylelint-config-standard: ^20.0.0
-    svg-url-loader: ^7.1.1
     through2: ^2.0.3
     typescript: ^3.7.3
     webpack: ^5.4.0
@@ -22911,10 +22903,12 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-alertstriper@workspace:packages/nav-frontend-alertstriper"
   dependencies:
     "@types/classnames": ^2.2.3
-    "@types/react": 15.0.23 || ^16.0.0
+    "@types/react": ^17.0.5
+    classnames: ^2.2.5
     nav-frontend-alertstriper-style: ^2.1.1
     nav-frontend-ikoner-assets: ^2.0.10
     nav-frontend-typografi: ^3.1.1
+    prop-types: ^15.5.10
     react: ^16.8.0 || ^17.0.0
   peerDependencies:
     classnames: ^2.2.5
@@ -22941,7 +22935,7 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-chevron@workspace:packages/nav-frontend-chevron"
   dependencies:
     "@types/classnames": ^2.2.3
-    "@types/react": 15.0.23 || ^16.0.0
+    "@types/react": ^17.0.5
     classnames: ^2.2.5
     nav-frontend-chevron-style: ^1.0.4
     prop-types: ^15.5.10
@@ -22995,7 +22989,7 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-ekspanderbartpanel@workspace:packages/nav-frontend-ekspanderbartpanel"
   dependencies:
     "@types/classnames": ^2.2.3
-    "@types/react": 15.0.23 || ^16.0.0
+    "@types/react": ^17.0.5
     "@types/react-collapse": ^5.0.0
     classnames: ^2.2.5
     nav-frontend-ekspanderbartpanel-style: ^1.1.2
@@ -23029,6 +23023,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-etiketter@workspace:packages/nav-frontend-etiketter"
   dependencies:
+    "@types/react": ^17.0.5
     classnames: ^2.2.5
     nav-frontend-core: ^5.1.1
     nav-frontend-etiketter-style: ^1.1.1
@@ -23072,6 +23067,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-grid@workspace:packages/nav-frontend-grid"
   dependencies:
+    "@types/react": ^17.0.5
     classnames: ^2.2.5
     nav-frontend-core: ^5.1.1
     nav-frontend-grid-style: ^1.0.2
@@ -23106,7 +23102,7 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-hjelpetekst@workspace:packages/nav-frontend-hjelpetekst"
   dependencies:
     "@types/classnames": ^2.2.3
-    "@types/react": 15.0.23 || ^16.0.0
+    "@types/react": ^17.0.5
     classnames: ^2.2.5
     nav-frontend-hjelpetekst-style: ^2.1.1
     nav-frontend-ikoner-assets: ^2.0.10
@@ -23129,6 +23125,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-ikoner-assets@workspace:packages/nav-frontend-ikoner-assets"
   dependencies:
+    "@types/react": ^17.0.5
     react: ^16.8.0 || ^17.0.0
   languageName: unknown
   linkType: soft
@@ -23137,6 +23134,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-ikonknapper@workspace:packages/nav-frontend-ikonknapper"
   dependencies:
+    "@types/react": ^17.0.5
     nav-frontend-chevron: ^1.0.28
     nav-frontend-ikoner-assets: ^2.0.10
     nav-frontend-knapper: ^2.1.2
@@ -23184,7 +23182,7 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-knapper@workspace:packages/nav-frontend-knapper"
   dependencies:
     "@types/classnames": ^2.2.3
-    "@types/react": 15.0.23 || ^16.0.0
+    "@types/react": ^17.0.5
     classnames: ^2.2.5
     nav-frontend-js-utils: ^1.0.17
     nav-frontend-knapper-style: ^1.1.2
@@ -23221,7 +23219,7 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-lenkepanel@workspace:packages/nav-frontend-lenkepanel"
   dependencies:
     "@types/classnames": ^2.2.3
-    "@types/react": 15.0.23 || ^16.0.0
+    "@types/react": ^17.0.5
     classnames: ^2.2.5
     nav-frontend-lenkepanel-style: ^1.1.1
     nav-frontend-typografi: ^3.1.1
@@ -23285,6 +23283,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-lesmerpanel@workspace:packages/nav-frontend-lesmerpanel"
   dependencies:
+    "@types/react": ^17.0.5
     "@types/react-collapse": ^5.0.0
     classnames: ^2.2.5
     nav-frontend-chevron: ^1.0.28
@@ -23321,6 +23320,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-lukknapp@workspace:packages/nav-frontend-lukknapp"
   dependencies:
+    "@types/react": ^17.0.5
     classnames: ^2.2.5
     nav-frontend-lukknapp-style: ^1.1.1
     prop-types: ^15.5.10
@@ -23354,6 +23354,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-modal@workspace:packages/nav-frontend-modal"
   dependencies:
+    "@types/react": ^17.0.5
     "@types/react-modal": ^3.1.2
     classnames: ^2.2.5
     nav-frontend-lukknapp: ^1.1.1
@@ -23389,6 +23390,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-paneler@workspace:packages/nav-frontend-paneler"
   dependencies:
+    "@types/react": ^17.0.5
     classnames: ^2.2.5
     nav-frontend-paneler-style: ^1.1.1
     nav-frontend-typografi: ^3.1.1
@@ -23421,7 +23423,7 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-popover@workspace:packages/nav-frontend-popover"
   dependencies:
     "@types/classnames": ^2.2.3
-    "@types/react": 15.0.23 || ^16.0.0
+    "@types/react": ^17.0.5
     classnames: ^2.2.5
     nav-frontend-js-utils: ^1.0.17
     nav-frontend-popover-style: ^1.1.1
@@ -23460,6 +23462,7 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-skjema@workspace:packages/nav-frontend-skjema"
   dependencies:
     "@navikt/fnrvalidator": ^1.1.0
+    "@types/react": ^17.0.5
     classnames: ^2.2.5
     nav-frontend-js-utils: ^1.0.17
     nav-frontend-lenker: ^1.1.1
@@ -23498,10 +23501,13 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-snakkeboble@workspace:packages/nav-frontend-snakkeboble"
   dependencies:
+    "@types/react": ^17.0.5
+    classnames: ^2.2.5
     nav-frontend-paneler: ^2.1.1
     nav-frontend-paneler-style: ^1.1.1
     nav-frontend-snakkeboble-style: ^1.1.1
     nav-frontend-typografi: ^3.1.1
+    prop-types: ^15.5.10
     react: ^16.8.0 || ^17.0.0
   peerDependencies:
     classnames: ^2.2.5
@@ -23529,7 +23535,7 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-spinner@workspace:packages/nav-frontend-spinner"
   dependencies:
     "@types/classnames": ^2.2.3
-    "@types/react": 15.0.23 || ^16.0.0
+    "@types/react": ^17.0.5
     nav-frontend-ikoner-assets: ^2.0.10
     nav-frontend-spinner-style: ^1.0.2
     prop-types: ^15.5.10
@@ -23562,6 +23568,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-stegindikator@workspace:packages/nav-frontend-stegindikator"
   dependencies:
+    "@types/react": ^17.0.5
+    classnames: ^2.2.5
     nav-frontend-js-utils: ^1.0.17
     nav-frontend-stegindikator-style: ^1.1.1
     react: ^16.8.0 || ^17.0.0
@@ -23583,6 +23591,7 @@ fsevents@^1.2.7:
     nav-frontend-core: ^5.1.1
     nav-frontend-knapper-style: ^1.1.2
     nav-frontend-typografi-style: ^1.1.1
+    svg-url-loader: ^7.1.1
   peerDependencies:
     nav-frontend-core: ^5.0.11
     nav-frontend-knapper-style: ^1.0.15
@@ -23609,6 +23618,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-tabs@workspace:packages/nav-frontend-tabs"
   dependencies:
+    "@types/react": ^17.0.5
     classnames: ^2.2.5
     nav-frontend-js-utils: ^1.0.17
     nav-frontend-tabs-style: ^1.1.1
@@ -23626,6 +23636,7 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-tekstomrade@workspace:packages/nav-frontend-tekstomrade"
   dependencies:
     "@navikt/textparser": ^2.0.0
+    "@types/react": ^17.0.5
     nav-frontend-lenker: ^1.1.1
     nav-frontend-typografi: ^3.1.1
     prop-types: ^15.5.10
@@ -23659,6 +23670,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-toggle@workspace:packages/nav-frontend-toggle"
   dependencies:
+    "@types/react": ^17.0.5
     classnames: ^2.2.5
     nav-frontend-js-utils: ^1.0.17
     nav-frontend-toggle-style: ^1.1.2
@@ -23688,6 +23700,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-typografi@workspace:packages/nav-frontend-typografi"
   dependencies:
+    "@types/react": ^17.0.5
+    classnames: ^2.2.5
     nav-frontend-core: ^5.1.1
     nav-frontend-typografi-style: ^1.1.1
     prop-types: ^15.5.10
@@ -23718,6 +23732,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-veileder@workspace:packages/nav-frontend-veileder"
   dependencies:
+    "@types/react": ^17.0.5
     classnames: ^2.2.5
     nav-frontend-js-utils: ^1.0.17
     nav-frontend-veileder-style: ^2.1.1
@@ -23753,6 +23768,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-veilederpanel@workspace:packages/nav-frontend-veilederpanel"
   dependencies:
+    "@types/react": ^17.0.5
     classnames: ^2.2.5
     nav-frontend-veileder: ^2.1.2
     nav-frontend-veilederpanel-style: ^1.1.1
@@ -23939,6 +23955,15 @@ fsevents@^1.2.7:
     lower-case: ^2.0.2
     tslib: ^2.0.3
   checksum: 84db4909caec37504c6655f995a004067f8733be8cd8d849f1578661b60a1685e086325fa4e1a5e8ce94e7416c1d0f037e2a00f635a14457183de80ab4fc7612
+  languageName: node
+  linkType: hard
+
+"node-abi@npm:^2.21.0":
+  version: 2.26.0
+  resolution: "node-abi@npm:2.26.0"
+  dependencies:
+    semver: ^5.4.1
+  checksum: 29c7ee7486635ab6f49227a74e37cf07560fbc2bed14b8a64a91f831a76da3ed8e7a3b80ebfa07f0e3a3b53287f1b30b736e01809799d71239c47c5249c407bd
   languageName: node
   linkType: hard
 
@@ -26746,7 +26771,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"prebuild-install@npm:^6.0.0, prebuild-install@npm:^6.0.1":
+"prebuild-install@npm:^6.0.1":
   version: 6.0.1
   resolution: "prebuild-install@npm:6.0.1"
   dependencies:
@@ -26768,6 +26793,30 @@ fsevents@^1.2.7:
   bin:
     prebuild-install: bin.js
   checksum: b23d88a27e4a672f5c59ca69733b27ce3ad133fd58d61e352bc1ccf61b5211b55b793ea8b21a81e63260bb10837c74c3f3cb5cfee47815aeaa729b0991e13751
+  languageName: node
+  linkType: hard
+
+"prebuild-install@npm:^6.1.1":
+  version: 6.1.2
+  resolution: "prebuild-install@npm:6.1.2"
+  dependencies:
+    detect-libc: ^1.0.3
+    expand-template: ^2.0.3
+    github-from-package: 0.0.0
+    minimist: ^1.2.3
+    mkdirp-classic: ^0.5.3
+    napi-build-utils: ^1.0.1
+    node-abi: ^2.21.0
+    noop-logger: ^0.1.1
+    npmlog: ^4.0.1
+    pump: ^3.0.0
+    rc: ^1.2.7
+    simple-get: ^3.0.3
+    tar-fs: ^2.0.0
+    tunnel-agent: ^0.6.0
+  bin:
+    prebuild-install: ./bin.js
+  checksum: 680fe93dc913134022a355da3181dc7e65ea1df16f15d0c956f3fb5327c9ae3d307de9a715bc4c3d9f5fd8044d4b02d368b7ba57e5197baca8f10acf0532f403
   languageName: node
   linkType: hard
 
@@ -29013,17 +29062,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"rimraf@npm:3.0.2, rimraf@npm:^3.0.0, rimraf@npm:^3.0.2":
-  version: 3.0.2
-  resolution: "rimraf@npm:3.0.2"
-  dependencies:
-    glob: ^7.1.3
-  bin:
-    rimraf: bin.js
-  checksum: f0de3e445581e64a8a077af476cc30708e659f5779ec2ca2a161556d0792aa318a685923798ae22055b4ecd02b9aff444ef619578f7af53cf8e0e248031e3dee
-  languageName: node
-  linkType: hard
-
 "rimraf@npm:^2.2.8, rimraf@npm:^2.5.4, rimraf@npm:^2.6.1, rimraf@npm:^2.6.2, rimraf@npm:^2.6.3, rimraf@npm:^2.7.1":
   version: 2.7.1
   resolution: "rimraf@npm:2.7.1"
@@ -29032,6 +29070,17 @@ fsevents@^1.2.7:
   bin:
     rimraf: ./bin.js
   checksum: 059efac2838ef917d4d1da1d80e724ad28c120cdf14ca6ed27ca72db2dc70be3e25421cba5947c6ec3d804c1d2bb9a247254653816ee0722bf943ffdd1ae19ef
+  languageName: node
+  linkType: hard
+
+"rimraf@npm:^3.0.0, rimraf@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "rimraf@npm:3.0.2"
+  dependencies:
+    glob: ^7.1.3
+  bin:
+    rimraf: bin.js
+  checksum: f0de3e445581e64a8a077af476cc30708e659f5779ec2ca2a161556d0792aa318a685923798ae22055b4ecd02b9aff444ef619578f7af53cf8e0e248031e3dee
   languageName: node
   linkType: hard
 
@@ -29552,25 +29601,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"sharp@npm:0.27.1":
-  version: 0.27.1
-  resolution: "sharp@npm:0.27.1"
-  dependencies:
-    array-flatten: ^3.0.0
-    color: ^3.1.3
-    detect-libc: ^1.0.3
-    node-addon-api: ^3.1.0
-    node-gyp: latest
-    npmlog: ^4.1.2
-    prebuild-install: ^6.0.0
-    semver: ^7.3.4
-    simple-get: ^4.0.0
-    tar-fs: ^2.1.1
-    tunnel-agent: ^0.6.0
-  checksum: 8b30f922a49fe76797e95556d605000e46dafbfa4dbb6b4859446d360396a74e562eb76a8e819c66053a4c097de35b51e2ed0f2ce317f215bb14324b3aad9002
-  languageName: node
-  linkType: hard
-
 "sharp@npm:^0.27.0":
   version: 0.27.2
   resolution: "sharp@npm:0.27.2"
@@ -29587,6 +29617,23 @@ fsevents@^1.2.7:
     tar-fs: ^2.1.1
     tunnel-agent: ^0.6.0
   checksum: 9b8a7649c684053b07737cdb896581fe8d7e961408572dadbf37fea658e985a01e635a3b07de069727fafa0372f1bf7ad60206da4ea0a059418652ca8823fa73
+  languageName: node
+  linkType: hard
+
+"sharp@npm:^0.28.1":
+  version: 0.28.1
+  resolution: "sharp@npm:0.28.1"
+  dependencies:
+    color: ^3.1.3
+    detect-libc: ^1.0.3
+    node-addon-api: ^3.1.0
+    node-gyp: latest
+    prebuild-install: ^6.1.1
+    semver: ^7.3.5
+    simple-get: ^3.1.0
+    tar-fs: ^2.1.1
+    tunnel-agent: ^0.6.0
+  checksum: 0cda405637414c392b367484e02b0729e743e6cb6f8e136db71cc0f43ecb26b15809cf6811b8c589c997cbd261fc929cf0305c3adae8a922296d9a7120966e02
   languageName: node
   linkType: hard
 
@@ -29693,7 +29740,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"simple-get@npm:^3.0.3":
+"simple-get@npm:^3.0.3, simple-get@npm:^3.1.0":
   version: 3.1.0
   resolution: "simple-get@npm:3.1.0"
   dependencies:
@@ -32374,7 +32421,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-typescript@^3.7.3:
+"typescript@^3.4.3, typescript@^3.7.3":
   version: 3.9.9
   resolution: "typescript@npm:3.9.9"
   bin:
@@ -32394,7 +32441,7 @@ typescript@^4.2.3:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^3.7.3#builtin<compat/typescript>":
+"typescript@patch:typescript@^3.4.3#builtin<compat/typescript>, typescript@patch:typescript@^3.7.3#builtin<compat/typescript>":
   version: 3.9.9
   resolution: "typescript@patch:typescript@npm%3A3.9.9#builtin<compat/typescript>::version=3.9.9&hash=a45b0e"
   bin:

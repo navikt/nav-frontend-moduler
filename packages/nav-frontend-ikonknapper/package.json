@@ -23,6 +23,7 @@
     "react": "^16.8.0 || ^17.0.0"
   },
   "devDependencies": {
+    "@types/react": "^17.0.5",
     "nav-frontend-chevron": "^1.0.28",
     "nav-frontend-ikoner-assets": "^2.0.10",
     "nav-frontend-knapper": "^2.1.2",

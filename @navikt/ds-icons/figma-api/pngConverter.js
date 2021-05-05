@@ -1,7 +1,7 @@
-import { existsSync, mkdirSync, readdirSync } from "fs";
-import sharp from "sharp";
-import rimraf from "rimraf";
-import pLimit from "p-limit";
+const fs = require("fs");
+const sharp = require("sharp");
+const rimraf = require("rimraf");
+const pLimit = require("p-limit");
 
 const convertToPng = async () => {
   const inputDir = "./svg/";
@@ -11,14 +11,14 @@ const convertToPng = async () => {
 
   const limit = pLimit(20);
 
-  if (existsSync(outDir)) {
+  if (fs.existsSync(outDir)) {
     rimraf.sync(outDir);
   }
-  mkdirSync(outDir);
-  sizes.forEach((size) => mkdirSync(outDir + size.toString()));
+  fs.mkdirSync(outDir);
+  sizes.forEach((size) => fs.mkdirSync(outDir + size.toString()));
 
   await Promise.all(
-    readdirSync(inputDir).map((file) => {
+    fs.readdirSync(inputDir).map((file) => {
       return limit(() =>
         sizes.forEach((size) => {
           const density = (100 * size) / 16;

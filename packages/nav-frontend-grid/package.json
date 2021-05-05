@@ -24,6 +24,7 @@
     "react": "^16.8.0 || ^17.0.0"
   },
   "devDependencies": {
+    "@types/react": "^17.0.5",
     "classnames": "^2.2.5",
     "nav-frontend-core": "^5.1.1",
     "nav-frontend-grid-style": "^1.0.2",

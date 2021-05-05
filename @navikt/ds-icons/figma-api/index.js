@@ -1,9 +1,9 @@
-import { getNodeChildren, getSvgImageUrls, getIconContent } from "./api";
-import { existsSync, unlinkSync, writeFileSync, mkdirSync } from "fs";
-import { resolve } from "path";
-import pLimit from "p-limit";
-import rimraf from "rimraf";
-import startCase from "lodash.startcase";
+const { getNodeChildren, getSvgImageUrls, getIconContent } = require("./api");
+const { existsSync, unlinkSync, writeFileSync, mkdirSync } = require("fs");
+const { resolve } = require("path");
+const pLimit = require("p-limit");
+const rimraf = require("rimraf");
+const startCase = require("lodash.startcase");
 
 const generateMetadata = (iconNodesArr) => {
   return iconNodesArr

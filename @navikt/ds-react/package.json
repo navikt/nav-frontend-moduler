@@ -44,8 +44,11 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@types/react": "^17.0.5",
     "copyfiles": "^2.4.1",
-    "react-router-dom": "^5.2.0"
+    "react": "^17.0.0",
+    "react-router-dom": "^5.2.0",
+    "typescript": "^3.4.3"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0"

@@ -13,7 +13,11 @@ export interface ActiveAnchorStore {
 }
 
 export const ActiveAnchorContext = createContext({} as ActiveAnchorStore);
-export const ActiveAnchorProvider = ({ children }) => {
+export const ActiveAnchorProvider = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
   const [anchors, setAnchors] = useState<string[]>([]);
   const [activeAnchor, setActiveAnchor] = useState<string>();
 
