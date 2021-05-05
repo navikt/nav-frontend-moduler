@@ -11,8 +11,14 @@ module.exports = (baseConfig) => {
     },
     {
       test: /\.less$/,
-      loaders: ["style-loader", "css-loader", "less-loader"],
-      include: path.resolve(__dirname, "../packages/"),
+      use: {
+        loader: "style-loader!css-loader!less-loader",
+        options: {
+          lessOptions: {
+            paths: [path.resolve(__dirname, "packages")],
+          },
+        },
+      },
     }
   );
   baseConfig.config.resolve.alias = {
