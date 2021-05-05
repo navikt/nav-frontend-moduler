@@ -3735,6 +3735,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@navikt/ds-icons@workspace:@navikt/ds-icons"
   dependencies:
+    "@mdx-js/react": ^1.6.22
+    "@storybook/addon-docs": ^6.2.9
+    "@storybook/react": ^6.2.9
     "@svgr/cli": ^5.4.0
     copyfiles: ^2.4.1
     dotenv: ^8.2.0
@@ -22878,6 +22881,8 @@ fsevents@^1.2.7:
   resolution: "nav-ds@workspace:."
   dependencies:
     "@babel/core": ^7.11.6
+    "@mdx-js/react": ^1.6.22
+    "@navikt/ds-css": "*"
     "@popperjs/core": ^2.5.4
     "@storybook/addon-actions": ^6.2.9
     "@storybook/addon-docs": ^6.2.9
@@ -22925,6 +22930,7 @@ fsevents@^1.2.7:
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.3.0
     mustache: ^4.0.1
+    nav-frontend-core: "*"
     p-limit: ^3.1.0
     prettier: 2.2.1
     pretty-quick: ^3.1.0
@@ -23017,7 +23023,7 @@ fsevents@^1.2.7:
   languageName: unknown
   linkType: soft
 
-"nav-frontend-core@^5.0.11, nav-frontend-core@^5.1.1, nav-frontend-core@workspace:packages/nav-frontend-core":
+"nav-frontend-core@*, nav-frontend-core@^5.0.11, nav-frontend-core@^5.1.1, nav-frontend-core@workspace:packages/nav-frontend-core":
   version: 0.0.0-use.local
   resolution: "nav-frontend-core@workspace:packages/nav-frontend-core"
   dependencies:
@@ -23062,7 +23068,9 @@ fsevents@^1.2.7:
     "@types/react-collapse": ^5.0.0
     classnames: ^2.2.5
     nav-frontend-ekspanderbartpanel-style: ^1.1.2
+    nav-frontend-etiketter: ^2.1.1
     nav-frontend-js-utils: ^1.0.17
+    nav-frontend-typografi: ^3.1.1
     react: ^16.8.0 || ^17.0.0
     react-collapse: ^5.0.0
   peerDependencies:
@@ -23088,7 +23096,7 @@ fsevents@^1.2.7:
   languageName: unknown
   linkType: soft
 
-"nav-frontend-etiketter@workspace:packages/nav-frontend-etiketter":
+"nav-frontend-etiketter@^2.1.1, nav-frontend-etiketter@workspace:packages/nav-frontend-etiketter":
   version: 0.0.0-use.local
   resolution: "nav-frontend-etiketter@workspace:packages/nav-frontend-etiketter"
   dependencies:
@@ -23195,6 +23203,7 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-ikoner-assets@workspace:packages/nav-frontend-ikoner-assets"
   dependencies:
     "@types/react": ^17.0.5
+    prop-types: ^15.5.10
     react: ^16.8.0 || ^17.0.0
   languageName: unknown
   linkType: soft
@@ -23526,7 +23535,7 @@ fsevents@^1.2.7:
   languageName: unknown
   linkType: soft
 
-"nav-frontend-skjema@workspace:packages/nav-frontend-skjema":
+"nav-frontend-skjema@^3.2.2, nav-frontend-skjema@workspace:packages/nav-frontend-skjema":
   version: 0.0.0-use.local
   resolution: "nav-frontend-skjema@workspace:packages/nav-frontend-skjema"
   dependencies:
@@ -23605,6 +23614,7 @@ fsevents@^1.2.7:
   dependencies:
     "@types/classnames": ^2.2.3
     "@types/react": ^17.0.5
+    classnames: ^2.2.5
     nav-frontend-ikoner-assets: ^2.0.10
     nav-frontend-spinner-style: ^1.0.2
     prop-types: ^15.5.10
@@ -23659,6 +23669,7 @@ fsevents@^1.2.7:
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-knapper-style: ^1.1.2
+    nav-frontend-skjema: ^3.2.2
     nav-frontend-typografi-style: ^1.1.1
     svg-url-loader: ^7.1.1
   peerDependencies:

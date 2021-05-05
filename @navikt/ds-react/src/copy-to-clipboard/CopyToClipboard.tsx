@@ -37,7 +37,7 @@ const CopyToClipboard = forwardRef<HTMLButtonElement, CopyToClipboardProps>(
 
     useEffect(() => {
       timeoutRef.current = openPopover
-        ? setTimeout(() => setOpenPopover(false), 2000)
+        ? window.setTimeout(() => setOpenPopover(false), 2000)
         : null;
       return () => {
         timeoutRef.current && clearTimeout(timeoutRef.current);

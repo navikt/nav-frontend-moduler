@@ -25,7 +25,7 @@ export const ActiveAnchorProvider = ({
     const scrollListener = () => {
       const offset = 100;
       const lastPassedAnchor = anchors
-        .map((anchor) => document.getElementById(anchor))
+        .map((anchor) => document.getElementById(anchor) as HTMLElement)
         .map((element: HTMLElement) => ({
           id: element.id,
           top: element.getBoundingClientRect().top - offset,
