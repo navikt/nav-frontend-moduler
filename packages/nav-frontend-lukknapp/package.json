@@ -23,6 +23,7 @@
     "react": "^16.8.0 || ^17.0.0"
   },
   "devDependencies": {
+    "@types/react": "^17.0.5",
     "classnames": "^2.2.5",
     "nav-frontend-lukknapp-style": "^1.1.1",
     "prop-types": "^15.5.10",

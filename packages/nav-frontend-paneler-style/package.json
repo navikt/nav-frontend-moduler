@@ -18,6 +18,8 @@
     "nav-frontend-core": "^5.0.11"
   },
   "devDependencies": {
+    "css-loader": "^5.0.1",
+    "less-loader": "^7.0.2",
     "mini-css-extract-plugin": "^1.6.0",
     "nav-frontend-core": "^5.1.1"
   }

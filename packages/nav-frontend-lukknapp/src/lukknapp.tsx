@@ -18,6 +18,10 @@ const cls = (bla, hvit, hjorne, className) =>
 export interface LukknappProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
+   * SR-only tekst for skjermleser
+   */
+  children: string;
+  /**
    * Blå variant
    */
   bla?: boolean;

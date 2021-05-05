@@ -3633,7 +3633,7 @@ __metadata:
     normalize.css: ^8.0.1
     postcss: ^8.2.7
     postcss-cli: ^8.3.1
-    postcss-import: ^14.0.0
+    postcss-import: ^14.0.1
   languageName: unknown
   linkType: soft
 
@@ -5722,7 +5722,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^17.0.0":
+"@types/react@npm:^17.0.0, @types/react@npm:^17.0.5":
   version: 17.0.5
   resolution: "@types/react@npm:17.0.5"
   dependencies:
@@ -22861,8 +22861,6 @@ fsevents@^1.2.7:
     lerna-changelog: ^1.0.1
     less: ^4.1.0
     less-loader: ^7.0.2
-    less-vars-to-js: ^1.3.0
-    lodash.camelcase: ^4.3.0
     mini-css-extract-plugin: ^1.3.0
     mustache: ^4.0.1
     p-limit: ^3.1.0
@@ -22883,7 +22881,6 @@ fsevents@^1.2.7:
     svg-url-loader: ^7.1.1
     through2: ^2.0.3
     typescript: ^3.7.3
-    vinyl: ^2.2.1
     webpack: ^5.4.0
     webpack-cli: ^4.2.0
     yarn: ^1.22.10
@@ -22894,6 +22891,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-alertstriper-style@workspace:packages/nav-frontend-alertstriper-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-ikoner-assets: ^2.0.10
@@ -22931,6 +22930,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-chevron-style@workspace:packages/nav-frontend-chevron-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
   languageName: unknown
   linkType: soft
@@ -22962,7 +22963,11 @@ fsevents@^1.2.7:
     gulp-newer: ^1.4.0
     gulp-plumber: ^1.2.0
     gulp-util: ^3.0.8
+    less-vars-to-js: ^1.3.0
     lessc: ^1.0.2
+    lodash.camelcase: ^4.3.0
+    through2: ^4.0.2
+    vinyl: ^2.2.1
   languageName: unknown
   linkType: soft
 
@@ -22970,6 +22975,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-ekspanderbartpanel-style@workspace:packages/nav-frontend-ekspanderbartpanel-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-chevron-style: ^1.0.4
     nav-frontend-core: ^5.1.1
@@ -23009,6 +23016,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-etiketter-style@workspace:packages/nav-frontend-etiketter-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
   peerDependencies:
@@ -23040,6 +23049,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-fullbreddeknapp-style@workspace:packages/nav-frontend-fullbreddeknapp-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
   languageName: unknown
   linkType: soft
@@ -23048,7 +23059,12 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-grid-style@workspace:packages/nav-frontend-grid-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
+    nav-frontend-core: ^5.1.1
+  peerDependencies:
+    nav-frontend-core: ^5.1.1
   languageName: unknown
   linkType: soft
 
@@ -23074,6 +23090,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-hjelpetekst-style@workspace:packages/nav-frontend-hjelpetekst-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-typografi-style: ^1.1.1
@@ -23150,6 +23168,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-knapper-style@workspace:packages/nav-frontend-knapper-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-typografi-style: ^1.1.1
@@ -23183,6 +23203,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-lenkepanel-style@workspace:packages/nav-frontend-lenkepanel-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-chevron-style: ^1.0.4
     nav-frontend-core: ^5.1.1
@@ -23218,6 +23240,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-lenker-style@workspace:packages/nav-frontend-lenker-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
   peerDependencies:
@@ -23229,6 +23253,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-lenker@workspace:packages/nav-frontend-lenker"
   dependencies:
+    "@types/react": ^17.0.5
     classnames: ^2.2.5
     nav-frontend-lenker-style: ^1.1.1
     prop-types: ^15.5.10
@@ -23245,6 +23270,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-lesmerpanel-style@workspace:packages/nav-frontend-lesmerpanel-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-paneler-style: ^1.1.1
@@ -23281,6 +23308,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-lukknapp-style@workspace:packages/nav-frontend-lukknapp-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
   peerDependencies:
@@ -23308,6 +23337,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-modal-style@workspace:packages/nav-frontend-modal-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-lukknapp-style: ^1.1.1
@@ -23345,6 +23376,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-paneler-style@workspace:packages/nav-frontend-paneler-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
   peerDependencies:
@@ -23376,6 +23409,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-popover-style@workspace:packages/nav-frontend-popover-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
   languageName: unknown
@@ -23407,6 +23442,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-skjema-style@workspace:packages/nav-frontend-skjema-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-paneler-style: ^1.1.1
@@ -23446,6 +23483,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-snakkeboble-style@workspace:packages/nav-frontend-snakkeboble-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-typografi-style: ^1.1.1
@@ -23479,6 +23518,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-spinner-style@workspace:packages/nav-frontend-spinner-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
   languageName: unknown
   linkType: soft
@@ -23506,6 +23547,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-stegindikator-style@workspace:packages/nav-frontend-stegindikator-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-typografi-style: ^1.1.1
@@ -23534,6 +23577,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-tabell-style@workspace:packages/nav-frontend-tabell-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-knapper-style: ^1.1.2
@@ -23549,6 +23594,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-tabs-style@workspace:packages/nav-frontend-tabs-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-typografi-style: ^1.1.1
@@ -23595,6 +23642,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-toggle-style@workspace:packages/nav-frontend-toggle-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-knapper-style: ^1.1.2
@@ -23628,6 +23677,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-typografi-style@workspace:packages/nav-frontend-typografi-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
   languageName: unknown
@@ -23654,6 +23705,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-veileder-style@workspace:packages/nav-frontend-veileder-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
   peerDependencies:
@@ -23683,6 +23736,8 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-veilederpanel-style@workspace:packages/nav-frontend-veilederpanel-style"
   dependencies:
+    css-loader: ^5.0.1
+    less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-paneler-style: ^1.1.1
@@ -26124,16 +26179,16 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"postcss-import@npm:^14.0.0":
-  version: 14.0.0
-  resolution: "postcss-import@npm:14.0.0"
+"postcss-import@npm:*, postcss-import@npm:^14.0.1":
+  version: 14.0.1
+  resolution: "postcss-import@npm:14.0.1"
   dependencies:
     postcss-value-parser: ^4.0.0
     read-cache: ^1.0.0
     resolve: ^1.1.7
   peerDependencies:
     postcss: ^8.0.0
-  checksum: 07ba17757318605f11e94c43c1fb9d276f615bf81ad32e1f784fa7317c7f53a3516ef096c059415f9e4be19f750402a50a5128d1c16c259d042818eaa34b0fc2
+  checksum: e903063ed17358988174f637a8b951de47e72a3d68e4a45e363c261943cc1e7efe78e9db4f13166ad3cf176f3e4b9f51f3192d3894f192bbef57871f94dd0cc5
   languageName: node
   linkType: hard
 
@@ -31634,7 +31689,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"through2@npm:^4.0.0":
+"through2@npm:^4.0.0, through2@npm:^4.0.2":
   version: 4.0.2
   resolution: "through2@npm:4.0.2"
   dependencies:
