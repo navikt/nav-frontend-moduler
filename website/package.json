@@ -5,9 +5,12 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.18",
     "@mdx-js/react": "^1.6.18",
+    "@navikt/ds-css": "*",
+    "@navikt/ds-react": "*",
     "@types/classnames": "^2.2.10",
     "babel-plugin-prismjs": "^2.0.1",
     "babel-preset-gatsby": "^0.5.13",
+    "canvg": "^3.0.7",
     "classnames": "^2.2.6",
     "copy-to-clipboard": "^3.3.1",
     "framer-motion": "^2.9.4",
@@ -42,10 +45,7 @@
     "react-responsive": "^8.1.0",
     "react-use-keypress": "^1.0.1",
     "rehype-slug": "^4.0.1",
-    "rehype-toc": "^3.0.2",
-    "@navikt/ds-css": "*",
-    "@navikt/ds-react": "*",
-    "canvg": "^3.0.7"
+    "rehype-toc": "^3.0.2"
   },
   "devDependencies": {
     "prettier": "2.2.1"
