@@ -15,6 +15,7 @@
     "build": "webpack --mode=production"
   },
   "dependencies": {
+    "mini-css-extract-plugin": "^1.6.0",
     "nav-frontend-core": "^5.1.1"
   }
 }

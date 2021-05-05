@@ -20,6 +20,7 @@
     "nav-frontend-paneler-style": "^1.0.0"
   },
   "devDependencies": {
+    "mini-css-extract-plugin": "^1.6.0",
     "nav-frontend-core": "^5.1.1",
     "nav-frontend-lukknapp-style": "^1.1.1",
     "nav-frontend-paneler-style": "^1.1.1"

@@ -5722,6 +5722,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react@npm:^17.0.0":
+  version: 17.0.5
+  resolution: "@types/react@npm:17.0.5"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: f9793e8113f14122d6ed20643b4fe27d30e10d7c80571a1d238c13f8171864f2a7b337194bf41310724498586ed4560fffd081a2d21e488afbb1aca33534189b
+  languageName: node
+  linkType: hard
+
 "@types/reactcss@npm:*":
   version: 1.2.3
   resolution: "@types/reactcss@npm:1.2.3"
@@ -16510,7 +16521,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"gulp-newer@npm:^1.3.0":
+"gulp-newer@npm:^1.3.0, gulp-newer@npm:^1.4.0":
   version: 1.4.0
   resolution: "gulp-newer@npm:1.4.0"
   dependencies:
@@ -16521,7 +16532,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"gulp-plumber@npm:^1.1.0":
+"gulp-plumber@npm:^1.1.0, gulp-plumber@npm:^1.2.0":
   version: 1.2.1
   resolution: "gulp-plumber@npm:1.2.1"
   dependencies:
@@ -22883,6 +22894,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-alertstriper-style@workspace:packages/nav-frontend-alertstriper-style"
   dependencies:
+    mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-ikoner-assets: ^2.0.10
     nav-frontend-paneler-style: ^1.1.1
@@ -22945,6 +22957,11 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-core@workspace:packages/nav-frontend-core"
   dependencies:
+    gulp: ^4.0.2
+    gulp-cssfont64-formatter: 0.0.2
+    gulp-newer: ^1.4.0
+    gulp-plumber: ^1.2.0
+    gulp-util: ^3.0.8
     lessc: ^1.0.2
   languageName: unknown
   linkType: soft
@@ -22953,6 +22970,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-ekspanderbartpanel-style@workspace:packages/nav-frontend-ekspanderbartpanel-style"
   dependencies:
+    mini-css-extract-plugin: ^1.6.0
     nav-frontend-chevron-style: ^1.0.4
     nav-frontend-core: ^5.1.1
     nav-frontend-paneler-style: ^1.1.1
@@ -22991,6 +23009,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-etiketter-style@workspace:packages/nav-frontend-etiketter-style"
   dependencies:
+    mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
   peerDependencies:
     nav-frontend-core: ^5.0.11
@@ -23020,12 +23039,16 @@ fsevents@^1.2.7:
 "nav-frontend-fullbreddeknapp-style@workspace:packages/nav-frontend-fullbreddeknapp-style":
   version: 0.0.0-use.local
   resolution: "nav-frontend-fullbreddeknapp-style@workspace:packages/nav-frontend-fullbreddeknapp-style"
+  dependencies:
+    mini-css-extract-plugin: ^1.6.0
   languageName: unknown
   linkType: soft
 
 "nav-frontend-grid-style@^1.0.2, nav-frontend-grid-style@workspace:packages/nav-frontend-grid-style":
   version: 0.0.0-use.local
   resolution: "nav-frontend-grid-style@workspace:packages/nav-frontend-grid-style"
+  dependencies:
+    mini-css-extract-plugin: ^1.6.0
   languageName: unknown
   linkType: soft
 
@@ -23051,6 +23074,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-hjelpetekst-style@workspace:packages/nav-frontend-hjelpetekst-style"
   dependencies:
+    mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-typografi-style: ^1.1.1
   peerDependencies:
@@ -23111,6 +23135,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-js-utils@workspace:packages/nav-frontend-js-utils"
   dependencies:
+    "@types/react": ^17.0.0
     lodash.throttle: ^4.1.1
     prop-types: ^15.5.10
     react: ^16.8.0 || ^17.0.0
@@ -23125,6 +23150,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-knapper-style@workspace:packages/nav-frontend-knapper-style"
   dependencies:
+    mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-typografi-style: ^1.1.1
   peerDependencies:
@@ -23157,6 +23183,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-lenkepanel-style@workspace:packages/nav-frontend-lenkepanel-style"
   dependencies:
+    mini-css-extract-plugin: ^1.6.0
     nav-frontend-chevron-style: ^1.0.4
     nav-frontend-core: ^5.1.1
     nav-frontend-paneler-style: ^1.1.1
@@ -23191,6 +23218,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-lenker-style@workspace:packages/nav-frontend-lenker-style"
   dependencies:
+    mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
   peerDependencies:
     nav-frontend-core: ^5.0.11
@@ -23217,6 +23245,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-lesmerpanel-style@workspace:packages/nav-frontend-lesmerpanel-style"
   dependencies:
+    mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-paneler-style: ^1.1.1
   peerDependencies:
@@ -23252,6 +23281,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-lukknapp-style@workspace:packages/nav-frontend-lukknapp-style"
   dependencies:
+    mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
   peerDependencies:
     nav-frontend-core: ^5.0.11
@@ -23278,6 +23308,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-modal-style@workspace:packages/nav-frontend-modal-style"
   dependencies:
+    mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-lukknapp-style: ^1.1.1
     nav-frontend-paneler-style: ^1.1.1
@@ -23314,6 +23345,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-paneler-style@workspace:packages/nav-frontend-paneler-style"
   dependencies:
+    mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
   peerDependencies:
     nav-frontend-core: ^5.0.11
@@ -23344,6 +23376,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-popover-style@workspace:packages/nav-frontend-popover-style"
   dependencies:
+    mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
   languageName: unknown
   linkType: soft
@@ -23374,6 +23407,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-skjema-style@workspace:packages/nav-frontend-skjema-style"
   dependencies:
+    mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-paneler-style: ^1.1.1
     nav-frontend-typografi-style: ^1.1.1
@@ -23412,6 +23446,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-snakkeboble-style@workspace:packages/nav-frontend-snakkeboble-style"
   dependencies:
+    mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-typografi-style: ^1.1.1
   peerDependencies:
@@ -23443,6 +23478,8 @@ fsevents@^1.2.7:
 "nav-frontend-spinner-style@^1.0.2, nav-frontend-spinner-style@workspace:packages/nav-frontend-spinner-style":
   version: 0.0.0-use.local
   resolution: "nav-frontend-spinner-style@workspace:packages/nav-frontend-spinner-style"
+  dependencies:
+    mini-css-extract-plugin: ^1.6.0
   languageName: unknown
   linkType: soft
 
@@ -23469,6 +23506,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-stegindikator-style@workspace:packages/nav-frontend-stegindikator-style"
   dependencies:
+    mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-typografi-style: ^1.1.1
   peerDependencies:
@@ -23496,6 +23534,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-tabell-style@workspace:packages/nav-frontend-tabell-style"
   dependencies:
+    mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-knapper-style: ^1.1.2
     nav-frontend-typografi-style: ^1.1.1
@@ -23510,6 +23549,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-tabs-style@workspace:packages/nav-frontend-tabs-style"
   dependencies:
+    mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-typografi-style: ^1.1.1
   peerDependencies:
@@ -23555,6 +23595,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-toggle-style@workspace:packages/nav-frontend-toggle-style"
   dependencies:
+    mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-knapper-style: ^1.1.2
     nav-frontend-typografi-style: ^1.1.1
@@ -23587,6 +23628,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-typografi-style@workspace:packages/nav-frontend-typografi-style"
   dependencies:
+    mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
   languageName: unknown
   linkType: soft
@@ -23612,6 +23654,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-veileder-style@workspace:packages/nav-frontend-veileder-style"
   dependencies:
+    mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
   peerDependencies:
     nav-frontend-core: ^5.0.11
@@ -23640,6 +23683,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "nav-frontend-veilederpanel-style@workspace:packages/nav-frontend-veilederpanel-style"
   dependencies:
+    mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-paneler-style: ^1.1.1
     nav-frontend-typografi-style: ^1.1.1

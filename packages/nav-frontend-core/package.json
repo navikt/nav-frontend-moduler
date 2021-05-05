@@ -11,6 +11,11 @@
     "/dist/main.css"
   ],
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cssfont64-formatter": "0.0.2",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-util": "^3.0.8",
     "lessc": "^1.0.2"
   },
   "scripts": {

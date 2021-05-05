@@ -15,6 +15,7 @@
     "url": "git+https://github.com/navikt/nav-frontend-moduler.git"
   },
   "devDependencies": {
+    "mini-css-extract-plugin": "^1.6.0",
     "nav-frontend-core": "^5.1.1",
     "nav-frontend-paneler-style": "^1.1.1",
     "nav-frontend-typografi-style": "^1.1.1"
