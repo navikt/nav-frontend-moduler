@@ -23068,9 +23068,7 @@ fsevents@^1.2.7:
     "@types/react-collapse": ^5.0.0
     classnames: ^2.2.5
     nav-frontend-ekspanderbartpanel-style: ^1.1.2
-    nav-frontend-etiketter: ^2.1.1
     nav-frontend-js-utils: ^1.0.17
-    nav-frontend-typografi: ^3.1.1
     react: ^16.8.0 || ^17.0.0
     react-collapse: ^5.0.0
   peerDependencies:
@@ -23096,7 +23094,7 @@ fsevents@^1.2.7:
   languageName: unknown
   linkType: soft
 
-"nav-frontend-etiketter@^2.1.1, nav-frontend-etiketter@workspace:packages/nav-frontend-etiketter":
+"nav-frontend-etiketter@workspace:packages/nav-frontend-etiketter":
   version: 0.0.0-use.local
   resolution: "nav-frontend-etiketter@workspace:packages/nav-frontend-etiketter"
   dependencies:
@@ -23394,7 +23392,7 @@ fsevents@^1.2.7:
   languageName: unknown
   linkType: soft
 
-"nav-frontend-lukknapp@^1.1.1, nav-frontend-lukknapp@workspace:packages/nav-frontend-lukknapp":
+"nav-frontend-lukknapp@^1.2.0, nav-frontend-lukknapp@workspace:packages/nav-frontend-lukknapp":
   version: 0.0.0-use.local
   resolution: "nav-frontend-lukknapp@workspace:packages/nav-frontend-lukknapp"
   dependencies:
@@ -23435,7 +23433,7 @@ fsevents@^1.2.7:
     "@types/react": ^17.0.5
     "@types/react-modal": ^3.1.2
     classnames: ^2.2.5
-    nav-frontend-lukknapp: ^1.1.1
+    nav-frontend-lukknapp: ^1.2.0
     nav-frontend-modal-style: ^1.1.1
     prop-types: ^15.5.10
     react: ^16.8.0 || ^17.0.0
@@ -23443,7 +23441,7 @@ fsevents@^1.2.7:
   peerDependencies:
     "@types/react-modal": ^3.1.2
     classnames: ^2.2.5
-    nav-frontend-lukknapp: ^1.0.48
+    nav-frontend-lukknapp: ^1.2.0
     nav-frontend-modal-style: ^1.0.0
     prop-types: ^15.5.10
     react: ^16.8.0 || ^17.0.0

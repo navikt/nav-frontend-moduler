@@ -7,7 +7,6 @@
     "postinstall": "husky install",
     "start": "yarn workspace website start",
     "boot": "yarn clean:lib && yarn lerna:build",
-    "boot:new": "yarn clean:lib && yarn workspaces foreach -p --topological-dev run build",
     "clean": "yarn workspace website clean",
     "build:gatsby": "yarn react-docgen && yarn workspace website build:gatsby",
     "serve": "yarn workspace website serve",

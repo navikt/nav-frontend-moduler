@@ -15,7 +15,6 @@ module.exports = (baseConfig) => {
       include: path.resolve(__dirname, "../packages/"),
     }
   );
-
   baseConfig.config.resolve.alias = {
     ...baseConfig.config.resolve?.alias,
     "./normalize.css": path.resolve(
