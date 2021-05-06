@@ -22949,7 +22949,6 @@ fsevents@^1.2.7:
     stylelint-config-standard: ^20.0.0
     through2: ^2.0.3
     typescript: ^3.7.3
-    webpack: ^5.4.0
     webpack-cli: ^4.2.0
     yarn: ^1.22.10
   languageName: unknown
@@ -34239,6 +34238,7 @@ typescript@^4.2.3:
     react-use-keypress: ^1.0.1
     rehype-slug: ^4.0.1
     rehype-toc: ^3.0.2
+    webpack: ^5.4.0
   languageName: unknown
   linkType: soft
 
