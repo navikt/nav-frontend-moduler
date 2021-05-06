@@ -12171,7 +12171,7 @@ __metadata:
     typescript: ^4.2.3
     unified: ^9.2.1
     url-parse: ^1.5.1
-    webpack: ^4.44.2
+    webpack: ^4.44.1
   languageName: unknown
   linkType: soft
 
@@ -22937,6 +22937,7 @@ fsevents@^1.2.7:
     prop-types: ^15.5.10
     react: ^16.8.0 || ^17.0.0
     react-docgen-typescript: ^1.21.0
+    react-dom: ^17.0.0
     react-is: ^16.13.1
     react-merge-refs: ^1.1.0
     react-popper: ^2.2.4
@@ -22959,12 +22960,14 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-alertstriper-style@workspace:packages/nav-frontend-alertstriper-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-ikoner-assets: ^2.0.10
     nav-frontend-paneler-style: ^1.1.1
     nav-frontend-typografi-style: ^1.1.1
+    webpack: ^5.4.0
   peerDependencies:
     nav-frontend-core: ^5.0.11
     nav-frontend-ikoner-assets: ^2.0.9
@@ -23000,8 +23003,10 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-chevron-style@workspace:packages/nav-frontend-chevron-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
+    webpack: ^5.4.0
   languageName: unknown
   linkType: soft
 
@@ -23045,12 +23050,14 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-ekspanderbartpanel-style@workspace:packages/nav-frontend-ekspanderbartpanel-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-chevron-style: ^1.0.4
     nav-frontend-core: ^5.1.1
     nav-frontend-paneler-style: ^1.1.1
     nav-frontend-typografi-style: ^1.1.1
+    webpack: ^5.4.0
   peerDependencies:
     nav-frontend-chevron-style: ^1.0.3
     nav-frontend-core: ^5.0.11
@@ -23086,9 +23093,11 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-etiketter-style@workspace:packages/nav-frontend-etiketter-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
+    webpack: ^5.4.0
   peerDependencies:
     nav-frontend-core: ^5.0.11
   languageName: unknown
@@ -23120,8 +23129,10 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-fullbreddeknapp-style@workspace:packages/nav-frontend-fullbreddeknapp-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
+    webpack: ^5.4.0
   languageName: unknown
   linkType: soft
 
@@ -23130,9 +23141,11 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-grid-style@workspace:packages/nav-frontend-grid-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
+    webpack: ^5.4.0
   peerDependencies:
     nav-frontend-core: ^5.1.1
   languageName: unknown
@@ -23162,10 +23175,12 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-hjelpetekst-style@workspace:packages/nav-frontend-hjelpetekst-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-typografi-style: ^1.1.1
+    webpack: ^5.4.0
   peerDependencies:
     nav-frontend-core: ^5.0.11
     nav-frontend-typografi-style: ^1.0.33
@@ -23243,10 +23258,12 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-knapper-style@workspace:packages/nav-frontend-knapper-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-typografi-style: ^1.1.1
+    webpack: ^5.4.0
   peerDependencies:
     nav-frontend-core: ^5.0.11
     nav-frontend-typografi-style: ^1.0.33
@@ -23278,11 +23295,13 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-lenkepanel-style@workspace:packages/nav-frontend-lenkepanel-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-chevron-style: ^1.0.4
     nav-frontend-core: ^5.1.1
     nav-frontend-paneler-style: ^1.1.1
+    webpack: ^5.4.0
   peerDependencies:
     nav-frontend-chevron-style: ^1.0.3
     nav-frontend-core: ^5.0.11
@@ -23315,9 +23334,11 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-lenker-style@workspace:packages/nav-frontend-lenker-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
+    webpack: ^5.4.0
   peerDependencies:
     nav-frontend-core: ^5.0.11
   languageName: unknown
@@ -23345,10 +23366,12 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-lesmerpanel-style@workspace:packages/nav-frontend-lesmerpanel-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-paneler-style: ^1.1.1
+    webpack: ^5.4.0
   peerDependencies:
     nav-frontend-core: ^5.0.11
     nav-frontend-paneler-style: ^1.0.0
@@ -23384,9 +23407,11 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-lukknapp-style@workspace:packages/nav-frontend-lukknapp-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
+    webpack: ^5.4.0
   peerDependencies:
     nav-frontend-core: ^5.0.11
   languageName: unknown
@@ -23414,11 +23439,13 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-modal-style@workspace:packages/nav-frontend-modal-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-lukknapp-style: ^1.1.1
     nav-frontend-paneler-style: ^1.1.1
+    webpack: ^5.4.0
   peerDependencies:
     nav-frontend-core: ^5.0.11
     nav-frontend-lukknapp-style: ^1.0.0
@@ -23454,9 +23481,11 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-paneler-style@workspace:packages/nav-frontend-paneler-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
+    webpack: ^5.4.0
   peerDependencies:
     nav-frontend-core: ^5.0.11
   languageName: unknown
@@ -23488,9 +23517,11 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-popover-style@workspace:packages/nav-frontend-popover-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
+    webpack: ^5.4.0
   languageName: unknown
   linkType: soft
 
@@ -23521,11 +23552,13 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-skjema-style@workspace:packages/nav-frontend-skjema-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-paneler-style: ^1.1.1
     nav-frontend-typografi-style: ^1.1.1
+    webpack: ^5.4.0
   peerDependencies:
     nav-frontend-core: ^5.0.11
     nav-frontend-paneler-style: ^1.0.0
@@ -23563,10 +23596,12 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-snakkeboble-style@workspace:packages/nav-frontend-snakkeboble-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-typografi-style: ^1.1.1
+    webpack: ^5.4.0
   peerDependencies:
     nav-frontend-core: ^5.0.11
     nav-frontend-typografi-style: ^1.0.33
@@ -23601,8 +23636,10 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-spinner-style@workspace:packages/nav-frontend-spinner-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
+    webpack: ^5.4.0
   languageName: unknown
   linkType: soft
 
@@ -23631,10 +23668,12 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-stegindikator-style@workspace:packages/nav-frontend-stegindikator-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-typografi-style: ^1.1.1
+    webpack: ^5.4.0
   peerDependencies:
     nav-frontend-core: ^5.0.11
     nav-frontend-typografi-style: ^1.0.33
@@ -23663,6 +23702,7 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-tabell-style@workspace:packages/nav-frontend-tabell-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
@@ -23670,6 +23710,7 @@ fsevents@^1.2.7:
     nav-frontend-skjema: ^3.2.2
     nav-frontend-typografi-style: ^1.1.1
     svg-url-loader: ^7.1.1
+    webpack: ^5.4.0
   peerDependencies:
     nav-frontend-core: ^5.0.11
     nav-frontend-knapper-style: ^1.0.15
@@ -23682,10 +23723,12 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-tabs-style@workspace:packages/nav-frontend-tabs-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-typografi-style: ^1.1.1
+    webpack: ^5.4.0
   peerDependencies:
     nav-frontend-core: ^5.0.11
     nav-frontend-typografi-style: ^1.0.33
@@ -23732,11 +23775,13 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-toggle-style@workspace:packages/nav-frontend-toggle-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-knapper-style: ^1.1.2
     nav-frontend-typografi-style: ^1.1.1
+    webpack: ^5.4.0
   peerDependencies:
     nav-frontend-core: ^5.0.11
     nav-frontend-knapper-style: ^1.0.15
@@ -23768,9 +23813,11 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-typografi-style@workspace:packages/nav-frontend-typografi-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
+    webpack: ^5.4.0
   languageName: unknown
   linkType: soft
 
@@ -23798,9 +23845,11 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-veileder-style@workspace:packages/nav-frontend-veileder-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
+    webpack: ^5.4.0
   peerDependencies:
     nav-frontend-core: ^5.0.11
   languageName: unknown
@@ -23830,11 +23879,13 @@ fsevents@^1.2.7:
   resolution: "nav-frontend-veilederpanel-style@workspace:packages/nav-frontend-veilederpanel-style"
   dependencies:
     css-loader: ^5.0.1
+    less: ^4.1.0
     less-loader: ^7.0.2
     mini-css-extract-plugin: ^1.6.0
     nav-frontend-core: ^5.1.1
     nav-frontend-paneler-style: ^1.1.1
     nav-frontend-typografi-style: ^1.1.1
+    webpack: ^5.4.0
   peerDependencies:
     nav-frontend-core: ^5.0.11
     nav-frontend-paneler-style: ^1.0.0
@@ -27678,7 +27729,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-dom@npm:17.0.1, react-dom@npm:^16.8.0 || ^17.0.0, react-dom@npm:^17.0.0":
+"react-dom@npm:17.0.1, react-dom@npm:^16.8.0 || ^17.0.0":
   version: 17.0.1
   resolution: "react-dom@npm:17.0.1"
   dependencies:
@@ -27688,6 +27739,19 @@ fsevents@^1.2.7:
   peerDependencies:
     react: 17.0.1
   checksum: 6a70028fbe3c95e0056c5e8ce065b4a9b8d4ff3bffde9b016454072bde5e4b012af7668ca45b7235ace428267d5be5237b68ea87ce8c296e54e81a8d678a4355
+  languageName: node
+  linkType: hard
+
+"react-dom@npm:^17.0.0":
+  version: 17.0.2
+  resolution: "react-dom@npm:17.0.2"
+  dependencies:
+    loose-envify: ^1.1.0
+    object-assign: ^4.1.1
+    scheduler: ^0.20.2
+  peerDependencies:
+    react: 17.0.2
+  checksum: 960a74ff6670766846a73097a599115963df1574833c59ca0c2fd909758ebe7a6214cd14f5e6aa63ce846d8f39fde7f3b80474ccfcfadc45dd7f3246364718c6
   languageName: node
   linkType: hard
 
@@ -29344,6 +29408,16 @@ fsevents@^1.2.7:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
   checksum: 377b4ad0d8313c4548bac7374bc38409e9d142799979ce396787efa04d1bcabf2591540f243f2131e3df8e56e7f5b29c5415248523e88ecb60f13a32db2e076f
+  languageName: node
+  linkType: hard
+
+"scheduler@npm:^0.20.2":
+  version: 0.20.2
+  resolution: "scheduler@npm:0.20.2"
+  dependencies:
+    loose-envify: ^1.1.0
+    object-assign: ^4.1.1
+  checksum: 2ba121e53e8a438394598612ec9a8f465b39157042f912d2dd5956af643e0d45ec6937ae4eeb0a807d1945b209515263aed12fc3bca95c7a027ec2a54e76b399
   languageName: node
   linkType: hard
 
@@ -34043,7 +34117,7 @@ typescript@^4.2.3:
   languageName: node
   linkType: hard
 
-"webpack@npm:4, webpack@npm:^4.44.1, webpack@npm:^4.44.2":
+"webpack@npm:4, webpack@npm:^4.44.1":
   version: 4.46.0
   resolution: "webpack@npm:4.46.0"
   dependencies:

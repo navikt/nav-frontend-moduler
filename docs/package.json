@@ -45,7 +45,7 @@
     "typescript": "^4.2.3",
     "unified": "^9.2.1",
     "url-parse": "^1.5.1",
-    "webpack": "^4.44.2"
+    "webpack": "^4.44.1"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^10.0.8",

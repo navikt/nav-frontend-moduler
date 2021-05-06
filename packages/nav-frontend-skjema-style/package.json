@@ -16,11 +16,13 @@
   },
   "devDependencies": {
     "css-loader": "^5.0.1",
+    "less": "^4.1.0",
     "less-loader": "^7.0.2",
     "mini-css-extract-plugin": "^1.6.0",
     "nav-frontend-core": "^5.1.1",
     "nav-frontend-paneler-style": "^1.1.1",
-    "nav-frontend-typografi-style": "^1.1.1"
+    "nav-frontend-typografi-style": "^1.1.1",
+    "webpack": "^5.4.0"
   },
   "peerDependencies": {
     "nav-frontend-core": "^5.0.11",
