@@ -35,7 +35,7 @@
   background-color: var(--navds-color-action-hover);
   border-color: transparent;
 
-  /* Padding calculated based on 18px font for 44px tall button */
+  /* Padding calculated based on 18px font for 48px tall button */
   padding: 0.53125rem var(--navds-spacing-3);
 }
 
@@ -47,6 +47,13 @@
 
 .navds-button--primary:active {
   background-color: var(--navds-color-action-active);
+}
+
+.navds-button--primary:hover:focus,
+.navds-button--primary:active:focus {
+  border-color: white;
+  border-width: 1px;
+  padding: 0.59375rem 0.8125rem;
 }
 
 /****************************
@@ -67,6 +74,23 @@
   color: var(--navds-color-text-inverse);
   border-color: var(--navds-color-action-active);
   background-color: var(--navds-color-action-active);
+}
+
+.navds-button--secondary:active:focus {
+  border-color: white;
+  border-width: 1px;
+  padding: 0.59375rem 0.8125rem;
+}
+
+/*************************
+ * .navds-button--primary *
+ * .navds-button--secondary *
+ *************************/
+
+.navds-button--primary.navds-button--s:active:focus,
+.navds-button--primary.navds-button--s:hover:focus,
+.navds-button--secondary.navds-button--s:active:focus {
+  padding: 0.3125rem calc(1rem - 1px);
 }
 
 /*************************
