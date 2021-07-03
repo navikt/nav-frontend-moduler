@@ -1,5 +1,5 @@
-const navds = {
-  color: {
+const colors = {
+  colors: {
     globalBlack: "#000000",
     globalBlue100: "#cce1ff",
     globalBlue200: "#99c3ff",
@@ -94,4 +94,4 @@ const navds = {
   },
 };
 
-export default navds;
+module.exports = colors;
