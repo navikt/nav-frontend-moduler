@@ -1,5 +1,5 @@
 {
-  "source": ["src/index.js", "src/color.js"],
+  "source": ["src/color.js", "src/index.js"],
   "platforms": {
     "scss": {
       "transformGroup": "scss",
