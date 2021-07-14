@@ -47,4 +47,10 @@ export {
   Label,
   Detail,
 } from "./typography/index";
+export {
+  ToggleButton,
+  ToggleButtonProps,
+  ToggleGroup,
+  ToggleGroupProps,
+} from "./toggle/index";
 export { OverridableComponent } from "./util/index";

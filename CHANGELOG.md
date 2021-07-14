@@ -13,12 +13,13 @@
 Ds-react, ds-css og ds-tokens er alle minor-bumpet
 
 Nye komponenter for typografi:
+
 - Title: Heading
 - Ingress
 - BodyLong: Lengre tekster, tenk en vanlig paragraf
 - BodyShort: Mindre tekster, tenk teksten på en knapp eller label
 - Label
-- Detail: Detaljetekst på 14px 
+- Detail: Detaljetekst på 14px
 
 Ds-css og ds-tokens er endret for å tilrettelegge for disse. Diverse komponenter i ds-react bruker nå også typo-stilene for å sikre riktig typo.
 
