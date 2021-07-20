@@ -13,6 +13,13 @@
 @import "copy-to-clipboard.css";
 @import "header.css";
 @import "internal-header.css";
+@import "form.css";
+@import "fieldset.css";
+@import "input.css";
+@import "textarea.css";
+@import "select.css";
+@import "radio.css";
+@import "checkbox.css";
 @import "link.css";
 @import "loader.css";
 @import "modal.css";

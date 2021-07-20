@@ -1,0 +1,24 @@
+.navds-form__element {
+  position: relative;
+}
+
+.navds-form--error {
+  color: var(--navds-color-red-50);
+  display: block;
+  margin-top: var(--navds-spacing-2);
+}
+
+.navds-form__label {
+  margin-bottom: var(--navds-spacing-2);
+  display: block;
+}
+
+.navds-form__description {
+  display: block;
+  margin-bottom: var(--navds-spacing-2);
+}
+
+.navds-form__legend {
+  display: block;
+  margin-bottom: var(--navds-spacing-2);
+}
